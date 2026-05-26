@@ -1,3 +1,0 @@
-module LaunchAtLogin {
-    header "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/LaunchAtLogin.build/include/LaunchAtLogin-Swift.h"
-}
