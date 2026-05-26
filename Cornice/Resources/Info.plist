@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleName</key>
+	<string>Cornice</string>
+	<key>CFBundleDisplayName</key>
+	<string>Cornice</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>LSUIElement</key>
+	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Cornice uses the camera for the Mirror feature to show a live preview in the notch area.</string>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>Cornice displays your upcoming events in the notch area for quick access.</string>
+	<key>NSAccessibilityUsageDescription</key>
+	<string>Cornice requires accessibility access to detect system events and provide HUD replacements.</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright 2024 Cornice. All rights reserved.</string>
+</dict>
+</plist>

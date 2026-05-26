@@ -1,6 +1,6 @@
-name: Crest
+name: Cornice
 options:
-  bundleIdPrefix: com.crest
+  bundleIdPrefix: com.cornice
   deploymentTarget:
     macOS: "14.0"
   xcodeVersion: "16.0"
@@ -30,17 +30,17 @@ packages:
     from: "2.6.0"
 
 targets:
-  Crest:
+  Cornice:
     type: application
     platform: macOS
     sources:
-      - path: Crest
+      - path: Cornice
         excludes:
           - "Resources/Info.plist"
-          - "Resources/Crest.entitlements"
+          - "Resources/Cornice.entitlements"
     resources:
-      - path: Crest/Resources/Assets.xcassets
-      - path: Crest/Resources/Sounds
+      - path: Cornice/Resources/Assets.xcassets
+      - path: Cornice/Resources/Sounds
         buildPhase: resources
     dependencies:
       - package: Defaults
@@ -50,43 +50,43 @@ targets:
       - package: Sparkle
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.crest.app
-        PRODUCT_NAME: Crest
-        PRODUCT_MODULE_NAME: Crest
+        PRODUCT_BUNDLE_IDENTIFIER: com.cornice.app
+        PRODUCT_NAME: Cornice
+        PRODUCT_MODULE_NAME: Cornice
         MARKETING_VERSION: "0.1.0"
         CURRENT_PROJECT_VERSION: "1"
-        INFOPLIST_FILE: Crest/Resources/Info.plist
-        CODE_SIGN_ENTITLEMENTS: Crest/Resources/Crest.entitlements
+        INFOPLIST_FILE: Cornice/Resources/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Cornice/Resources/Cornice.entitlements
         GENERATE_INFOPLIST_FILE: NO
         ENABLE_APP_SANDBOX: NO
         ALWAYS_SEARCH_USER_PATHS: NO
         LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
 
-  CrestTests:
+  CorniceTests:
     type: bundle.unit-test
     platform: macOS
     sources:
-      - path: CrestTests
+      - path: CorniceTests
     dependencies:
-      - target: Crest
+      - target: Cornice
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.crest.app.tests
-        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Crest.app/Contents/MacOS/Crest"
+        PRODUCT_BUNDLE_IDENTIFIER: com.cornice.app.tests
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Cornice.app/Contents/MacOS/Cornice"
         BUNDLE_LOADER: "$(TEST_HOST)"
 
 schemes:
-  Crest:
+  Cornice:
     build:
       targets:
-        Crest: all
-        CrestTests: [test]
+        Cornice: all
+        CorniceTests: [test]
     run:
       config: Debug
     test:
       config: Debug
       targets:
-        - CrestTests
+        - CorniceTests
     profile:
       config: Release
     analyze:

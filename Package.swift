@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Crest",
+    name: "Cornice",
     platforms: [
         .macOS(.v14)
     ],
@@ -15,17 +15,17 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "Crest",
+            name: "Cornice",
             dependencies: [
                 "Defaults",
                 "KeyboardShortcuts",
                 .product(name: "LaunchAtLogin", package: "LaunchAtLogin-Modern"),
                 "Sparkle",
             ],
-            path: "Crest",
+            path: "Cornice",
             exclude: [
                 "Resources/Info.plist",
-                "Resources/Crest.entitlements",
+                "Resources/Cornice.entitlements",
             ],
             resources: [
                 .process("Resources/Assets.xcassets"),
@@ -33,9 +33,9 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "CrestTests",
-            dependencies: ["Crest"],
-            path: "CrestTests"
+            name: "CorniceTests",
+            dependencies: ["Cornice"],
+            path: "CorniceTests"
         ),
     ]
 )
