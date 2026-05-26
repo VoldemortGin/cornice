@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cornice — Dynamic Island for your Mac</title>
+  <meta name="description" content="Transform your MacBook's notch into a powerful command surface with media controls, file management, system monitoring, and more.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" rx="3" width="20" height="14"/>
+          <path d="M8 3v0a4 4 0 0 1 8 0v0"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+        Cornice
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="https://github.com/VoldemortGin/cornice" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/VoldemortGin/cornice/releases" target="_blank" rel="noopener" class="nav-cta">Download</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content reveal">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M7 0.5C3.41 0.5 0.5 3.41 0.5 7C0.5 10.59 3.41 13.5 7 13.5C10.59 13.5 13.5 10.59 13.5 7C13.5 3.41 10.59 0.5 7 0.5ZM5.75 10.25L2.5 7L3.4075 6.0925L5.75 8.4275L10.5925 3.585L11.5 4.5L5.75 10.25Z" fill="currentColor"/>
+        </svg>
+        Requires macOS 14 Sonoma or later
+      </div>
+      <h1 class="hero-title">Cornice</h1>
+      <p class="hero-tagline">Dynamic Island for your Mac</p>
+      <p class="hero-subtitle">Transform your MacBook's notch into a powerful command surface with media controls, file management, system monitoring, and more.</p>
+      <div class="hero-actions">
+        <a href="https://github.com/VoldemortGin/cornice/releases" target="_blank" rel="noopener" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 1V11M8 11L4 7M8 11L12 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 13H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          Download for macOS
+        </a>
+        <a href="https://github.com/VoldemortGin/cornice" target="_blank" rel="noopener" class="btn-secondary">
+          View on GitHub
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="notch-demo">
+        <div class="notch-screen">
+          <div class="notch-bar">
+            <div class="notch-shape">
+              <div class="notch-content">
+                <div class="notch-dot"></div>
+                <span class="notch-label">Cornice</span>
+                <div class="notch-dot"></div>
+              </div>
+            </div>
+          </div>
+          <div class="notch-expanded">
+            <div class="notch-expanded-inner">
+              <div class="notch-player">
+                <div class="notch-album-art"></div>
+                <div class="notch-track-info">
+                  <span class="notch-track-name">Bohemian Rhapsody</span>
+                  <span class="notch-track-artist">Queen</span>
+                </div>
+                <div class="notch-controls">
+                  <svg class="notch-ctrl" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                  <svg class="notch-ctrl notch-ctrl-play" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg>
+                  <svg class="notch-ctrl" viewBox="0 0 24 24" fill="currentColor"><path d="M16 6h2v12h-2zm-3.5 6L4 6v12z"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Everything in your notch.</h2>
+        <p class="section-subtitle">Ten powerful features, all accessible from the space you never knew you had.</p>
+      </div>
+      <div class="feature-grid">
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="8" y="12" width="32" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
+              <circle cx="20" cy="24" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M30 20H36M30 24H34M30 28H36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Media Controls</h3>
+          <p class="feature-desc">Now Playing info, album art, playback controls. See what's playing at a glance.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="10" y="8" width="16" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+              <rect x="22" y="20" width="16" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M18 28L30 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 3"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">File Shelf</h3>
+          <p class="feature-desc">Drag files to the notch for temporary storage. Drag out to any app. AirDrop with a drop.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 10V38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M16 18V38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M32 14V38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M8 24V38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M40 20V38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <line x1="6" y1="38" x2="42" y2="38" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">System Monitor</h3>
+          <p class="feature-desc">CPU, RAM, Network, Battery. Real-time metrics in your notch.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
+              <line x1="8" y1="16" x2="40" y2="16" stroke="currentColor" stroke-width="2"/>
+              <line x1="16" y1="8" x2="16" y2="40" stroke="currentColor" stroke-width="2"/>
+              <line x1="24" y1="8" x2="24" y2="40" stroke="currentColor" stroke-width="2"/>
+              <line x1="32" y1="8" x2="32" y2="40" stroke="currentColor" stroke-width="2"/>
+              <line x1="8" y1="24" x2="40" y2="24" stroke="currentColor" stroke-width="2"/>
+              <line x1="8" y1="32" x2="40" y2="32" stroke="currentColor" stroke-width="2"/>
+              <circle cx="28" cy="20" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Calendar</h3>
+          <p class="feature-desc">Upcoming events at a glance. Never miss a meeting.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 18H32M16 24H28M16 30H24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Clipboard History</h3>
+          <p class="feature-desc">Every copy, searchable and accessible. Pin important entries.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M12 36V24L24 12L36 24V36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 36V28H28V36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="36" cy="12" r="6" stroke="currentColor" stroke-width="2"/>
+              <path d="M36 9V15M33 12H39" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Custom HUDs</h3>
+          <p class="feature-desc">Replace macOS volume and brightness popups with beautiful notch HUDs.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="12" y="12" width="10" height="10" rx="2.5" stroke="currentColor" stroke-width="2"/>
+              <rect x="26" y="12" width="10" height="10" rx="2.5" stroke="currentColor" stroke-width="2"/>
+              <rect x="12" y="26" width="10" height="10" rx="2.5" stroke="currentColor" stroke-width="2"/>
+              <rect x="26" y="26" width="10" height="10" rx="2.5" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Quick Apps</h3>
+          <p class="feature-desc">Pin your favorite apps. Launch with one click.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="22" r="12" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="22" r="5" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 40H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M24 34V40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Camera Mirror</h3>
+          <p class="feature-desc">Quick mirror check right from the notch.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="10" y="10" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2"/>
+              <path d="M18 30L22 18L28 26L34 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Apple Shortcuts</h3>
+          <p class="feature-desc">Trigger your favorite Shortcuts from the notch.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="4" y="10" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+              <rect x="26" y="16" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M7 8h12M29 14h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M13 38V24M35 38V30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Multi-Monitor</h3>
+          <p class="feature-desc">Works on every display. Notch and non-notch screens.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Effortlessly intuitive.</h2>
+        <p class="section-subtitle">Three gestures. Infinite possibilities.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3 class="step-title">Hover to expand</h3>
+            <p class="step-desc">Move your cursor over the notch. Cornice expands into a full command surface.</p>
+          </div>
+          <div class="step-visual">
+            <div class="step-anim step-anim-hover">
+              <div class="mini-notch">
+                <div class="mini-notch-inner"></div>
+              </div>
+              <div class="cursor-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 0L4 20L9.5 14.5L14 22L17 20.5L12.5 13L20 13Z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3 class="step-title">Click to switch</h3>
+            <p class="step-desc">Click a tab to switch between features. Media, shelf, monitor, calendar, and more.</p>
+          </div>
+          <div class="step-visual">
+            <div class="step-anim step-anim-click">
+              <div class="tab-row">
+                <div class="tab">
+                  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a5 5 0 0 0-5 5v2a1 1 0 0 0 1 1h1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3h1a1 1 0 0 0 1-1V6a5 5 0 0 0-5-5z"/></svg>
+                </div>
+                <div class="tab tab-active">
+                  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 4h12v8H2z"/></svg>
+                </div>
+                <div class="tab">
+                  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 2a6 6 0 1 0 0 12A6 6 0 0 0 8 2zm0 2v4l3 2"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3 class="step-title">Drag to shelf</h3>
+            <p class="step-desc">Drag any file to the notch. It stays on the shelf until you need it.</p>
+          </div>
+          <div class="step-visual">
+            <div class="step-anim step-anim-drag">
+              <div class="drag-file">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                </svg>
+              </div>
+              <div class="drag-target">
+                <div class="mini-notch-static"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Section -->
+  <section class="tech">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Built right.</h2>
+        <p class="section-subtitle">Native performance. Open source. No Electron.</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card reveal">
+          <div class="tech-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M34 14C34 14 30 10 24 10C18 10 14 14 14 14C14 14 18 18 24 18C30 18 34 14 34 14Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M34 34C34 34 30 38 24 38C18 38 14 34 14 34C14 34 18 30 24 30C30 30 34 34 34 34Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M14 14C14 14 10 18 10 24C10 30 14 34 14 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M34 14C34 14 38 18 38 24C38 30 34 34 34 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="tech-title">SwiftUI</h3>
+          <p class="tech-desc">Built entirely with SwiftUI for a truly native macOS experience.</p>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M14 10L10 24L14 38" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M34 10L38 24L34 38" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M28 12L20 36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="tech-title">Open Source</h3>
+          <p class="tech-desc">Fully open source on GitHub. Inspect, contribute, and customize.</p>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M13 12L24 6L35 12V24L24 30L13 24Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M24 30V42" stroke="currentColor" stroke-width="2"/>
+              <path d="M13 24L24 30L35 24" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M35 24V36L24 42L13 36V24" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="tech-title">Native Performance</h3>
+          <p class="tech-desc">Lightweight, fast, and efficient. No web views. No bloat.</p>
+        </div>
+      </div>
+      <div class="tech-cta reveal">
+        <a href="https://github.com/VoldemortGin/cornice" target="_blank" rel="noopener" class="btn-github">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-heart">Made with <span class="heart">&hearts;</span> and Swift</p>
+        <div class="footer-links">
+          <a href="https://github.com/VoldemortGin/cornice" target="_blank" rel="noopener">GitHub</a>
+          <span class="footer-sep">&middot;</span>
+          <a href="https://github.com/VoldemortGin/cornice/releases" target="_blank" rel="noopener">Releases</a>
+        </div>
+        <p class="footer-req">macOS 14 Sonoma or later required</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal using Intersection Observer
+    document.addEventListener('DOMContentLoaded', function () {
+      var reveals = document.querySelectorAll('.reveal');
+      if (!reveals.length) return;
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      reveals.forEach(function (el) {
+        observer.observe(el);
+      });
+
+      // Sticky nav background on scroll
+      var nav = document.querySelector('.nav');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 20) {
+          nav.classList.add('nav-scrolled');
+        } else {
+          nav.classList.remove('nav-scrolled');
+        }
+      }, { passive: true });
+    });
+  </script>
+
+</body>
+</html>
