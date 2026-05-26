@@ -25,8 +25,8 @@ extension Defaults.Keys {
 
     static let menubarIcon = Key<Bool>("menubarIcon", default: true)
     static let activationMethod = Key<ActivationMethod>("activationMethod", default: .hover)
-    static let hoverDelay = Key<Double>("hoverDelay", default: 0.2)
-    static let closeDelay = Key<Double>("closeDelay", default: 0.5)
+    static let hoverDelay = Key<Double>("hoverDelay", default: AnimationConstants.defaultHoverDelay)
+    static let closeDelay = Key<Double>("closeDelay", default: AnimationConstants.defaultCollapseDelay)
     static let showOnAllDisplays = Key<Bool>("showOnAllDisplays", default: false)
 
     // MARK: Appearance
@@ -40,7 +40,7 @@ extension Defaults.Keys {
     static let musicSource = Key<MusicSourceSetting>("musicSource", default: .nowPlaying)
     static let showVisualizer = Key<Bool>("showVisualizer", default: true)
     static let sneakPeekOnTrackChange = Key<Bool>("sneakPeekOnTrackChange", default: true)
-    static let sneakPeekDuration = Key<Double>("sneakPeekDuration", default: 3.0)
+    static let sneakPeekDuration = Key<Double>("sneakPeekDuration", default: AnimationConstants.defaultSneakPeekDuration)
 
     // MARK: HUD
 
@@ -48,7 +48,7 @@ extension Defaults.Keys {
     static let replaceVolumeHUD = Key<Bool>("replaceVolumeHUD", default: true)
     static let replaceBrightnessHUD = Key<Bool>("replaceBrightnessHUD", default: true)
     static let replaceKeyboardHUD = Key<Bool>("replaceKeyboardHUD", default: true)
-    static let hudDuration = Key<Double>("hudDuration", default: 1.5)
+    static let hudDuration = Key<Double>("hudDuration", default: AnimationConstants.defaultHUDDuration)
     static let hudShowPercentage = Key<Bool>("hudShowPercentage", default: true)
 
     // MARK: Calendar

@@ -1,9 +1,22 @@
 import AVFoundation
 import AppKit
 
+// MARK: - Protocol
+
+@MainActor
+protocol CameraProviding: AnyObject {
+    var state: CameraState { get }
+    var session: AVCaptureSession? { get }
+    func checkPermission()
+    func start()
+    func stop()
+}
+
+// MARK: - Concrete Implementation
+
 @MainActor
 @Observable
-final class CameraService {
+final class CameraService: CameraProviding {
     private(set) var state: CameraState = .idle
     private(set) var session: AVCaptureSession?
 

@@ -10,12 +10,22 @@ final class HUDViewModel {
 
     // MARK: - Private
 
-    private let volumeController = VolumeController()
-    private let brightnessController = BrightnessController()
+    private let volumeController: VolumeControlling
+    private let brightnessController: BrightnessControlling
     private let keyInterceptor = MediaKeyInterceptor()
     private var dismissTask: Task<Void, Never>?
     private var preMuteVolume: Float = 0.5
     private var isStarted = false
+
+    // MARK: - Init
+
+    init(
+        volumeController: VolumeControlling = VolumeController(),
+        brightnessController: BrightnessControlling = BrightnessController()
+    ) {
+        self.volumeController = volumeController
+        self.brightnessController = brightnessController
+    }
 
     // MARK: - Computed
 

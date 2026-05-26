@@ -3,18 +3,11 @@ import SwiftUI
 /// The fully expanded notch content with tab bar and feature content area.
 struct OpenStateView: View {
     let viewModel: NotchViewModel
+    let featureViewModels: FeatureViewModels
 
     @State private var selectedTab: NotchTab = .home
     @State private var previousTabIndex: Int = 0
     @State private var slideDirection: Edge = .trailing
-
-    // Feature view models (owned here so they persist while open)
-    @State private var mediaVM = MediaPlayerViewModel()
-    @State private var shelfVM = FileShelfViewModel()
-    @State private var clipboardVM = ClipboardHistoryViewModel()
-    @State private var monitorVM = SystemMonitorViewModel()
-    @State private var calendarVM = CalendarViewModel()
-    @State private var quickAppsVM = QuickAppsViewModel()
 
     var body: some View {
         VStack(spacing: 0) {
@@ -38,13 +31,13 @@ struct OpenStateView: View {
             case .home:
                 homeContent
             case .shelf:
-                FileShelfView(viewModel: shelfVM)
+                FileShelfView(viewModel: featureViewModels.shelf)
             case .clipboard:
-                ClipboardHistoryView(viewModel: clipboardVM)
+                ClipboardHistoryView(viewModel: featureViewModels.clipboard)
             case .monitor:
-                CompactMonitorView(viewModel: monitorVM)
+                CompactMonitorView(viewModel: featureViewModels.monitor)
             case .calendar:
-                CompactCalendarView(viewModel: calendarVM)
+                CompactCalendarView(viewModel: featureViewModels.calendar)
             }
         }
         .transition(tabTransition)
@@ -65,12 +58,12 @@ struct OpenStateView: View {
     private var homeContent: some View {
         HStack(spacing: 12) {
             // Media player on the left
-            CompactMediaView(viewModel: mediaVM)
+            CompactMediaView(viewModel: featureViewModels.media)
                 .frame(maxWidth: .infinity)
 
             // Quick apps + widgets on the right
             VStack(spacing: 8) {
-                QuickAppsView(viewModel: quickAppsVM)
+                QuickAppsView(viewModel: featureViewModels.quickApps)
                 Spacer(minLength: 0)
             }
             .frame(width: 180)

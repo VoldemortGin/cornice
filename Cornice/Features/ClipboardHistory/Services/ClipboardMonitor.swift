@@ -3,7 +3,21 @@ import os
 
 private let log = Logger(subsystem: "com.cornice.app", category: "clipboard")
 
-final class ClipboardMonitor {
+// MARK: - Protocol
+
+protocol ClipboardMonitoring: AnyObject {
+    var onClipboardChange: ((ClipboardEntry) -> Void)? { get set }
+    func startMonitoring()
+    func stopMonitoring()
+    func pauseMonitoring()
+    func resumeMonitoring()
+    func markAsRestoring()
+    func clearRestoringFlag()
+}
+
+// MARK: - Concrete Implementation
+
+final class ClipboardMonitor: ClipboardMonitoring {
     private var timer: Timer?
     private var lastChangeCount: Int
     private let pollInterval: TimeInterval

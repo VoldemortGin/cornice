@@ -3,16 +3,10 @@ import SwiftUI
 /// Larger expansion for detail views (e.g., expanded media player, full system monitor).
 struct ExpandedDetailView: View {
     let viewModel: NotchViewModel
+    let featureViewModels: FeatureViewModels
 
     @State private var selectedTab: NotchTab = .home
     @State private var slideDirection: Edge = .trailing
-
-    // Feature view models
-    @State private var mediaVM = MediaPlayerViewModel()
-    @State private var shelfVM = FileShelfViewModel()
-    @State private var clipboardVM = ClipboardHistoryViewModel()
-    @State private var monitorVM = SystemMonitorViewModel()
-    @State private var calendarVM = CalendarViewModel()
 
     var body: some View {
         VStack(spacing: 0) {
@@ -37,15 +31,15 @@ struct ExpandedDetailView: View {
         Group {
             switch selectedTab {
             case .home:
-                ExpandedMediaView(viewModel: mediaVM)
+                ExpandedMediaView(viewModel: featureViewModels.media)
             case .shelf:
-                FileShelfView(viewModel: shelfVM)
+                FileShelfView(viewModel: featureViewModels.shelf)
             case .clipboard:
-                ClipboardHistoryView(viewModel: clipboardVM)
+                ClipboardHistoryView(viewModel: featureViewModels.clipboard)
             case .monitor:
-                ExpandedMonitorView(viewModel: monitorVM)
+                ExpandedMonitorView(viewModel: featureViewModels.monitor)
             case .calendar:
-                ExpandedCalendarView(viewModel: calendarVM)
+                ExpandedCalendarView(viewModel: featureViewModels.calendar)
             }
         }
         .transition(

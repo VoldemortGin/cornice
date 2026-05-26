@@ -2,14 +2,36 @@ import SwiftUI
 import AppKit
 import Defaults
 
+// MARK: - Protocol
+
+protocol QuickAppsStoring: AnyObject {
+    var apps: [QuickAppEntry] { get set }
+}
+
+// MARK: - Concrete Implementation
+
+final class DefaultsQuickAppsStore: QuickAppsStoring {
+    var apps: [QuickAppEntry] {
+        get { Defaults[.quickApps] }
+        set { Defaults[.quickApps] = newValue }
+    }
+}
+
+// MARK: - ViewModel
+
 @MainActor
 @Observable
 final class QuickAppsViewModel {
     private static let maxApps = 12
+    private let store: QuickAppsStoring
+
+    init(store: QuickAppsStoring = DefaultsQuickAppsStore()) {
+        self.store = store
+    }
 
     var apps: [QuickAppEntry] {
-        get { Defaults[.quickApps] }
-        set { Defaults[.quickApps] = newValue }
+        get { store.apps }
+        set { store.apps = newValue }
     }
 
     var canAddMore: Bool {

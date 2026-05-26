@@ -4,7 +4,20 @@ import os
 
 private let log = Logger(subsystem: "com.cornice.app", category: "calendar")
 
-final class CalendarService {
+// MARK: - Protocol
+
+protocol CalendarProviding: AnyObject {
+    var permissionState: CalendarPermissionState { get }
+    var onEventsChanged: (() -> Void)? { get set }
+    func requestAccess() async -> Bool
+    func fetchEvents(lookAheadHours: Int, calendars: [EKCalendar]?) -> [CalendarEvent]
+    func availableCalendars() -> [EKCalendar]
+    func calendars(withIdentifiers ids: Set<String>) -> [EKCalendar]
+}
+
+// MARK: - Concrete Implementation
+
+final class CalendarService: CalendarProviding {
     private let store = EKEventStore()
     private var changeObserver: NSObjectProtocol?
 

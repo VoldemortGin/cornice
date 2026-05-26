@@ -13,30 +13,30 @@ final class NotchPanelController {
     /// The view model driving this screen's notch UI.
     let viewModel: NotchViewModel
 
+    /// The shared feature view models for all state views.
+    let featureViewModels: FeatureViewModels
+
     /// The screen this controller is associated with.
     private let screen: NSScreen
 
     /// The hosting view that bridges SwiftUI content into the panel.
     private var hostingView: NSHostingView<AnyView>?
 
-    /// Geometry for this screen.
-    private let geometry: NotchGeometry
-
-    init(screen: NSScreen, viewModel: NotchViewModel) {
+    init(screen: NSScreen, viewModel: NotchViewModel, featureViewModels: FeatureViewModels) {
         self.screen = screen
         self.viewModel = viewModel
-        self.geometry = NotchGeometry(screen: screen)
+        self.featureViewModels = featureViewModels
         createPanel()
     }
 
     // MARK: - Panel Creation
 
     private func createPanel() {
-        let initialFrame = geometry.frame(for: .closed)
+        let initialFrame = viewModel.geometryInfo.panelFrame(for: .closed)
         let newPanel = NotchPanel(contentRect: initialFrame)
 
         // Create SwiftUI content view using the full ContentView
-        let contentView = ContentView(viewModel: viewModel)
+        let contentView = ContentView(viewModel: viewModel, featureViewModels: featureViewModels)
         let hosting = NSHostingView(rootView: AnyView(contentView))
         hosting.frame = NSRect(origin: .zero, size: initialFrame.size)
         hosting.autoresizingMask = [.width, .height]
@@ -51,7 +51,7 @@ final class NotchPanelController {
     /// Shows the panel, positioned over the notch area.
     func show() {
         guard let panel else { return }
-        let frame = geometry.frame(for: viewModel.state)
+        let frame = viewModel.geometryInfo.panelFrame(for: viewModel.state)
         panel.setFrame(frame, display: true)
         panel.orderFrontRegardless()
 
@@ -68,7 +68,7 @@ final class NotchPanelController {
     /// Recalculates and applies the panel frame based on the current notch state.
     func updateFrame() {
         guard let panel else { return }
-        let frame = panelFrame(for: viewModel.state)
+        let frame = viewModel.geometryInfo.panelFrame(for: viewModel.state)
         panel.setFrame(frame, display: true)
     }
 
@@ -78,7 +78,7 @@ final class NotchPanelController {
 
         // Set the panel to the maximum frame needed so SwiftUI can animate within it.
         // We use the target state's frame directly.
-        let frame = panelFrame(for: state)
+        let frame = viewModel.geometryInfo.panelFrame(for: state)
 
         NSAnimationContext.runAnimationGroup { context in
             context.duration = 0.42
@@ -99,18 +99,6 @@ final class NotchPanelController {
         panel?.orderOut(nil)
         panel = nil
         hostingView = nil
-    }
-
-    // MARK: - Private
-
-    /// Computes the panel frame for a given state.
-    /// The panel is always centered on its screen, pinned to the top edge.
-    private func panelFrame(for state: NotchState) -> NSRect {
-        let size = geometry.size(for: state)
-        let screenFrame = screen.frame
-        let originX = screenFrame.midX - size.width / 2
-        let originY = screenFrame.maxY - size.height
-        return NSRect(x: originX, y: originY, width: size.width, height: size.height)
     }
 }
 

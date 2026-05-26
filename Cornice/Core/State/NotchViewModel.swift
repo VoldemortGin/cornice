@@ -1,4 +1,6 @@
 import SwiftUI
+import Combine
+import Defaults
 
 /// The user-chosen method for activating the notch.
 enum ActivationMethod: String, Codable, CaseIterable, Sendable {
@@ -28,17 +30,17 @@ final class NotchViewModel {
     /// Whether the mouse is currently hovering over the notch region.
     var isHovered: Bool = false
 
-    /// The activation method for this screen.
-    var activationMethod: ActivationMethod = .hover
+    /// The activation method for this screen. Synced from user settings.
+    var activationMethod: ActivationMethod = Defaults[.activationMethod]
 
-    /// Hover activation delay.
-    var hoverDelay: TimeInterval = AnimationConstants.defaultHoverDelay
+    /// Hover activation delay. Synced from user settings.
+    var hoverDelay: TimeInterval = Defaults[.hoverDelay]
 
-    /// Collapse delay after mouse leaves expanded area.
-    var closeDelay: TimeInterval = AnimationConstants.defaultCollapseDelay
+    /// Collapse delay after mouse leaves expanded area. Synced from user settings.
+    var closeDelay: TimeInterval = Defaults[.closeDelay]
 
-    /// Sneak peek auto-dismiss duration.
-    var sneakPeekDuration: TimeInterval = AnimationConstants.defaultSneakPeekDuration
+    /// Sneak peek auto-dismiss duration. Synced from user settings.
+    var sneakPeekDuration: TimeInterval = Defaults[.sneakPeekDuration]
 
     /// The screen UUID for multi-monitor identity.
     let screenUUID: String
@@ -57,12 +59,48 @@ final class NotchViewModel {
     @ObservationIgnored
     private var sneakPeekTimer: Task<Void, Never>?
 
+    @ObservationIgnored
+    private var settingsCancellables = Set<AnyCancellable>()
+
     // MARK: - Init
 
     init(screenUUID: String, geometryInfo: NotchGeometryInfo) {
         self.screenUUID = screenUUID
         self.geometryInfo = geometryInfo
         self.notchSize = geometryInfo.closedSize
+        observeSettingsChanges()
+    }
+
+    // MARK: - Settings Observation
+
+    private func observeSettingsChanges() {
+        Defaults.publisher(.activationMethod)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] change in
+                self?.activationMethod = change.newValue
+            }
+            .store(in: &settingsCancellables)
+
+        Defaults.publisher(.hoverDelay)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] change in
+                self?.hoverDelay = change.newValue
+            }
+            .store(in: &settingsCancellables)
+
+        Defaults.publisher(.closeDelay)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] change in
+                self?.closeDelay = change.newValue
+            }
+            .store(in: &settingsCancellables)
+
+        Defaults.publisher(.sneakPeekDuration)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] change in
+                self?.sneakPeekDuration = change.newValue
+            }
+            .store(in: &settingsCancellables)
     }
 
     // MARK: - State Transitions

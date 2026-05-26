@@ -4,6 +4,7 @@ import SwiftUI
 /// Routes to the appropriate sub-view based on the current NotchState.
 struct ContentView: View {
     @State var viewModel: NotchViewModel
+    var featureViewModels: FeatureViewModels
 
     var body: some View {
         ZStack {
@@ -31,7 +32,7 @@ struct ContentView: View {
     private var contentForState: some View {
         switch viewModel.state {
         case .closed:
-            ClosedStateView(viewModel: viewModel)
+            ClosedStateView(viewModel: viewModel, featureViewModels: featureViewModels)
                 .transition(AnimationConstants.contentAppearTransition)
 
         case .sneakPeek(let event):
@@ -39,11 +40,11 @@ struct ContentView: View {
                 .transition(AnimationConstants.contentAppearTransition)
 
         case .open:
-            OpenStateView(viewModel: viewModel)
+            OpenStateView(viewModel: viewModel, featureViewModels: featureViewModels)
                 .transition(AnimationConstants.contentAppearTransition)
 
         case .expandedDetail:
-            ExpandedDetailView(viewModel: viewModel)
+            ExpandedDetailView(viewModel: viewModel, featureViewModels: featureViewModels)
                 .transition(AnimationConstants.contentAppearTransition)
         }
     }

@@ -23,13 +23,13 @@ final class ClipboardHistoryViewModel {
         entries.filter(\.isPinned)
     }
 
-    private let monitor: ClipboardMonitor
+    private let monitor: ClipboardMonitoring
     private let persistenceURL: URL
     private let encoder: JSONEncoder
     private let decoder: JSONDecoder
     private var saveTask: Task<Void, Never>?
 
-    init(monitor: ClipboardMonitor = ClipboardMonitor(), persistenceDirectory: URL? = nil) {
+    init(monitor: ClipboardMonitoring = ClipboardMonitor(), persistenceDirectory: URL? = nil) {
         self.monitor = monitor
 
         let dir = persistenceDirectory ?? FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!

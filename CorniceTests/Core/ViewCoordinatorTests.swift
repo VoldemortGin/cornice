@@ -6,6 +6,12 @@ import XCTest
 @MainActor
 final class ViewCoordinatorTests: XCTestCase {
 
+    // MARK: - Fresh Instance Helper
+
+    private func makeFreshCoordinator() -> ViewCoordinator {
+        ViewCoordinator()
+    }
+
     // MARK: - Singleton Access
 
     func test_shared_returnsSameInstance() {
@@ -21,75 +27,65 @@ final class ViewCoordinatorTests: XCTestCase {
     // MARK: - Initial State
 
     func test_initialState_viewModelsIsEmpty_beforeSetup() {
-        // Before setupForCurrentScreens is called, viewModels may be empty
-        // (if no screens are connected in CI) or populated (if screens exist).
-        // The coordinator itself should be accessible.
-        let coordinator = ViewCoordinator.shared
-        XCTAssertNotNil(coordinator.viewModels)
+        let coordinator = makeFreshCoordinator()
+        XCTAssertTrue(coordinator.viewModels.isEmpty,
+                      "Fresh coordinator should have no viewModels before setupForCurrentScreens")
     }
 
     func test_initialState_currentTabIsHome() {
-        let coordinator = ViewCoordinator.shared
+        let coordinator = makeFreshCoordinator()
         XCTAssertEqual(coordinator.currentTab, "home",
                        "Default currentTab should be 'home'")
     }
 
     func test_initialState_hudEventIsNil() {
-        let coordinator = ViewCoordinator.shared
-        coordinator.clearHUD()
+        let coordinator = makeFreshCoordinator()
         XCTAssertNil(coordinator.hudEvent,
-                     "HUD event should be nil after clearHUD")
+                     "HUD event should be nil on a fresh coordinator")
     }
 
     // MARK: - Current Tab
 
     func test_currentTab_canBeChanged() {
-        let coordinator = ViewCoordinator.shared
-        let original = coordinator.currentTab
+        let coordinator = makeFreshCoordinator()
         coordinator.currentTab = "media"
         XCTAssertEqual(coordinator.currentTab, "media")
-        coordinator.currentTab = original // restore
     }
 
     func test_currentTab_acceptsArbitraryStrings() {
-        let coordinator = ViewCoordinator.shared
-        let original = coordinator.currentTab
+        let coordinator = makeFreshCoordinator()
         coordinator.currentTab = "calendar"
         XCTAssertEqual(coordinator.currentTab, "calendar")
         coordinator.currentTab = "shelf"
         XCTAssertEqual(coordinator.currentTab, "shelf")
-        coordinator.currentTab = original // restore
     }
 
     // MARK: - HUD State Management
 
     func test_showHUD_setsHudEvent() {
-        let coordinator = ViewCoordinator.shared
+        let coordinator = makeFreshCoordinator()
         let event = SneakPeekEvent.volume(level: 0.75)
         coordinator.showHUD(event)
         XCTAssertEqual(coordinator.hudEvent, event,
                        "showHUD should set hudEvent to the provided event")
-        coordinator.clearHUD() // cleanup
     }
 
     func test_showHUD_volumeEvent_setsCorrectValue() {
-        let coordinator = ViewCoordinator.shared
+        let coordinator = makeFreshCoordinator()
         let event = SneakPeekEvent.volume(level: 0.5)
         coordinator.showHUD(event)
         XCTAssertEqual(coordinator.hudEvent, .volume(level: 0.5))
-        coordinator.clearHUD()
     }
 
     func test_showHUD_brightnessEvent_setsCorrectValue() {
-        let coordinator = ViewCoordinator.shared
+        let coordinator = makeFreshCoordinator()
         let event = SneakPeekEvent.brightness(level: 0.3)
         coordinator.showHUD(event)
         XCTAssertEqual(coordinator.hudEvent, .brightness(level: 0.3))
-        coordinator.clearHUD()
     }
 
     func test_clearHUD_resetsHudEventToNil() {
-        let coordinator = ViewCoordinator.shared
+        let coordinator = makeFreshCoordinator()
         coordinator.showHUD(.volume(level: 0.5))
         XCTAssertNotNil(coordinator.hudEvent)
         coordinator.clearHUD()
@@ -98,31 +94,24 @@ final class ViewCoordinatorTests: XCTestCase {
     }
 
     func test_showHUD_replacesExistingEvent() {
-        let coordinator = ViewCoordinator.shared
+        let coordinator = makeFreshCoordinator()
         coordinator.showHUD(.volume(level: 0.3))
         coordinator.showHUD(.brightness(level: 0.8))
         XCTAssertEqual(coordinator.hudEvent, .brightness(level: 0.8),
                        "A new showHUD call should replace the previous HUD event")
-        coordinator.clearHUD()
     }
 
     // MARK: - Active Screen Tracking
 
     func test_activeViewModel_returnsNil_whenNoActiveScreen() {
-        let coordinator = ViewCoordinator.shared
-        // If activeScreenUUID doesn't match any viewModel key, activeViewModel is nil.
-        // We can't directly set activeScreenUUID, but we test the computed property logic.
-        // When activeScreenUUID is nil, activeViewModel must be nil.
-        // Note: In CI with no screens, this is likely the case.
-        if coordinator.activeScreenUUID == nil {
-            XCTAssertNil(coordinator.activeViewModel,
-                         "activeViewModel should be nil when activeScreenUUID is nil")
-        }
+        let coordinator = makeFreshCoordinator()
+        XCTAssertNil(coordinator.activeScreenUUID)
+        XCTAssertNil(coordinator.activeViewModel,
+                     "activeViewModel should be nil when activeScreenUUID is nil")
     }
 
     func test_viewModels_isDictionaryType() {
-        let coordinator = ViewCoordinator.shared
-        // viewModels should be a [String: NotchViewModel] dictionary
+        let coordinator = makeFreshCoordinator()
         let dict: [String: NotchViewModel] = coordinator.viewModels
         XCTAssertNotNil(dict)
     }
@@ -130,23 +119,21 @@ final class ViewCoordinatorTests: XCTestCase {
     // MARK: - Setup for Current Screens
 
     func test_setupForCurrentScreens_populatesViewModels() {
-        let coordinator = ViewCoordinator.shared
+        let coordinator = makeFreshCoordinator()
         coordinator.setupForCurrentScreens()
-        // After setup, the number of viewModels should match the number of connected screens.
         let screenCount = NSScreen.screens.count
         XCTAssertEqual(coordinator.viewModels.count, screenCount,
                        "ViewModels count should match connected screens count")
     }
 
     func test_setupForCurrentScreens_calledTwice_preservesExistingViewModels() {
-        let coordinator = ViewCoordinator.shared
+        let coordinator = makeFreshCoordinator()
         coordinator.setupForCurrentScreens()
         let firstPassModels = coordinator.viewModels
 
         coordinator.setupForCurrentScreens()
         let secondPassModels = coordinator.viewModels
 
-        // Same UUIDs should map to the same ViewModel instances (identity preserved).
         for (uuid, vm) in firstPassModels {
             if let secondVM = secondPassModels[uuid] {
                 XCTAssertTrue(vm === secondVM,
@@ -156,7 +143,7 @@ final class ViewCoordinatorTests: XCTestCase {
     }
 
     func test_setupForCurrentScreens_viewModelKeysAreScreenUUIDs() {
-        let coordinator = ViewCoordinator.shared
+        let coordinator = makeFreshCoordinator()
         coordinator.setupForCurrentScreens()
         for (uuid, vm) in coordinator.viewModels {
             XCTAssertEqual(vm.screenUUID, uuid,
@@ -167,28 +154,31 @@ final class ViewCoordinatorTests: XCTestCase {
     // MARK: - Sneak Peek Event Routing
 
     func test_routeSneakPeek_doesNotCrash_whenNoViewModels() {
-        // Even if no viewModels exist, routeSneakPeek should not crash.
-        let coordinator = ViewCoordinator.shared
+        let coordinator = makeFreshCoordinator()
         let event = SneakPeekEvent.trackChange(title: "Test", artist: "Artist")
-        // This should not throw or crash.
         coordinator.routeSneakPeek(event)
     }
 
     func test_routeSneakPeek_toAll_doesNotCrash() {
-        let coordinator = ViewCoordinator.shared
+        let coordinator = makeFreshCoordinator()
         coordinator.setupForCurrentScreens()
         let event = SneakPeekEvent.volume(level: 0.6)
         coordinator.routeSneakPeek(event, toAll: true)
-        // No crash = pass
     }
 
     func test_routeSneakPeek_defaultToAllIsFalse() {
-        // Verify the default parameter: toAll defaults to false.
-        let coordinator = ViewCoordinator.shared
+        let coordinator = makeFreshCoordinator()
         coordinator.setupForCurrentScreens()
         let event = SneakPeekEvent.brightness(level: 0.4)
-        // Calling without toAll parameter should compile and not crash.
         coordinator.routeSneakPeek(event)
+    }
+
+    // MARK: - ViewCoordinating Protocol Conformance
+
+    func test_conformsToViewCoordinating() {
+        let coordinator = makeFreshCoordinator()
+        XCTAssertTrue(coordinator is ViewCoordinating,
+                      "ViewCoordinator should conform to ViewCoordinating protocol")
     }
 
     // MARK: - SneakPeekEvent Equality (used by coordinator routing)

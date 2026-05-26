@@ -66,7 +66,7 @@ final class CalendarViewModel {
 
     // MARK: - Private
 
-    private let service = CalendarService()
+    private let service: CalendarProviding
     private var refreshTimer: Timer?
     private var midnightTimer: Timer?
     private var timeZoneObserver: NSObjectProtocol?
@@ -74,7 +74,8 @@ final class CalendarViewModel {
 
     // MARK: - Init
 
-    init() {
+    init(service: CalendarProviding = CalendarService()) {
+        self.service = service
         permissionState = service.permissionState
 
         service.onEventsChanged = { [weak self] in

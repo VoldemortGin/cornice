@@ -5,9 +5,27 @@ import os
 
 private let log = Logger(subsystem: "com.cornice.app", category: "systemMonitor")
 
+// MARK: - Protocols
+
+protocol CPUMonitoring: Sendable {
+    func read() -> CPUUsage
+}
+
+protocol MemoryMonitoring: Sendable {
+    func read() -> MemoryUsage
+}
+
+protocol NetworkMonitoring: Sendable {
+    func read() -> NetworkSpeed
+}
+
+protocol BatteryMonitoring: Sendable {
+    func read() -> BatteryInfo?
+}
+
 // MARK: - CPU Monitor
 
-final class CPUMonitor: @unchecked Sendable {
+final class CPUMonitor: CPUMonitoring, @unchecked Sendable {
     private struct CPUTicks: Sendable {
         let user: UInt64
         let system: UInt64
@@ -73,7 +91,7 @@ final class CPUMonitor: @unchecked Sendable {
 
 // MARK: - Memory Monitor
 
-final class MemoryMonitor: Sendable {
+final class MemoryMonitor: MemoryMonitoring, Sendable {
     init() {}
 
     func read() -> MemoryUsage {
@@ -106,7 +124,7 @@ final class MemoryMonitor: Sendable {
 
 // MARK: - Network Monitor
 
-final class NetworkMonitor: @unchecked Sendable {
+final class NetworkMonitor: NetworkMonitoring, @unchecked Sendable {
     private struct InterfaceSnapshot {
         let bytesIn: UInt64
         let bytesOut: UInt64
@@ -176,7 +194,7 @@ final class NetworkMonitor: @unchecked Sendable {
 
 // MARK: - Battery Monitor
 
-final class BatteryMonitor: Sendable {
+final class BatteryMonitor: BatteryMonitoring, Sendable {
     init() {}
 
     func read() -> BatteryInfo? {

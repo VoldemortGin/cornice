@@ -35,12 +35,26 @@ final class SystemMonitorViewModel {
 
     // MARK: - Private
 
-    private let cpuMonitor = CPUMonitor()
-    private let memoryMonitor = MemoryMonitor()
-    private let networkMonitor = NetworkMonitor()
-    private let batteryMonitor = BatteryMonitor()
+    private let cpuMonitor: any CPUMonitoring
+    private let memoryMonitor: any MemoryMonitoring
+    private let networkMonitor: any NetworkMonitoring
+    private let batteryMonitor: any BatteryMonitoring
     private var timer: Timer?
     private var lowBatteryAlertCooldown: Date?
+
+    // MARK: - Init
+
+    init(
+        cpuMonitor: any CPUMonitoring = CPUMonitor(),
+        memoryMonitor: any MemoryMonitoring = MemoryMonitor(),
+        networkMonitor: any NetworkMonitoring = NetworkMonitor(),
+        batteryMonitor: any BatteryMonitoring = BatteryMonitor()
+    ) {
+        self.cpuMonitor = cpuMonitor
+        self.memoryMonitor = memoryMonitor
+        self.networkMonitor = networkMonitor
+        self.batteryMonitor = batteryMonitor
+    }
 
     // MARK: - Lifecycle
 

@@ -1,7 +1,7 @@
 import XCTest
 @testable import Cornice
 
-/// Tests for AppConstants -- app-wide constant values for notch dimensions,
+/// Tests for AppConstants and AnimationConstants -- app-wide constant values for notch dimensions,
 /// timing, virtual notch defaults, and URLs.
 final class AppConstantsTests: XCTestCase {
 
@@ -58,18 +58,18 @@ final class AppConstantsTests: XCTestCase {
         XCTAssertLessThanOrEqual(height, 60, "Physical height should be at most 60")
     }
 
-    func test_notchDefaults_closedTopRadius_isPositive() {
-        XCTAssertGreaterThan(AppConstants.NotchDefaults.closedTopRadius, 0)
+    func test_cornerRadii_closedTopRadius_isPositive() {
+        XCTAssertGreaterThan(AnimationConstants.CornerRadii.closedTop, 0)
     }
 
-    func test_notchDefaults_closedBottomRadius_isPositive() {
-        XCTAssertGreaterThan(AppConstants.NotchDefaults.closedBottomRadius, 0)
+    func test_cornerRadii_closedBottomRadius_isPositive() {
+        XCTAssertGreaterThan(AnimationConstants.CornerRadii.closedBottom, 0)
     }
 
-    func test_notchDefaults_bottomRadius_greaterThanTopRadius() {
+    func test_cornerRadii_bottomRadius_greaterThanTopRadius() {
         XCTAssertGreaterThan(
-            AppConstants.NotchDefaults.closedBottomRadius,
-            AppConstants.NotchDefaults.closedTopRadius,
+            AnimationConstants.CornerRadii.closedBottom,
+            AnimationConstants.CornerRadii.closedTop,
             "Bottom radius should be larger than top radius for the closed state"
         )
     }
@@ -77,17 +77,17 @@ final class AppConstantsTests: XCTestCase {
     // MARK: - VirtualNotch Defaults
 
     func test_virtualNotch_defaultWidth_isPositive() {
-        XCTAssertGreaterThan(AppConstants.VirtualNotch.defaultWidth, 0)
+        XCTAssertGreaterThan(AnimationConstants.Sizes.virtualNotchWidth, 0)
     }
 
     func test_virtualNotch_defaultHeight_isPositive() {
-        XCTAssertGreaterThan(AppConstants.VirtualNotch.defaultHeight, 0)
+        XCTAssertGreaterThan(AnimationConstants.Sizes.virtualNotchHeight, 0)
     }
 
     func test_virtualNotch_minWidth_lessOrEqualDefault() {
         XCTAssertLessThanOrEqual(
             AppConstants.VirtualNotch.minWidth,
-            AppConstants.VirtualNotch.defaultWidth,
+            AnimationConstants.Sizes.virtualNotchWidth,
             "Minimum width should be less than or equal to default width"
         )
     }
@@ -95,7 +95,7 @@ final class AppConstantsTests: XCTestCase {
     func test_virtualNotch_maxWidth_greaterOrEqualDefault() {
         XCTAssertGreaterThanOrEqual(
             AppConstants.VirtualNotch.maxWidth,
-            AppConstants.VirtualNotch.defaultWidth,
+            AnimationConstants.Sizes.virtualNotchWidth,
             "Maximum width should be greater than or equal to default width"
         )
     }
@@ -111,7 +111,7 @@ final class AppConstantsTests: XCTestCase {
     func test_virtualNotch_minHeight_lessOrEqualDefault() {
         XCTAssertLessThanOrEqual(
             AppConstants.VirtualNotch.minHeight,
-            AppConstants.VirtualNotch.defaultHeight,
+            AnimationConstants.Sizes.virtualNotchHeight,
             "Minimum height should be less than or equal to default height"
         )
     }
@@ -119,7 +119,7 @@ final class AppConstantsTests: XCTestCase {
     func test_virtualNotch_maxHeight_greaterOrEqualDefault() {
         XCTAssertGreaterThanOrEqual(
             AppConstants.VirtualNotch.maxHeight,
-            AppConstants.VirtualNotch.defaultHeight,
+            AnimationConstants.Sizes.virtualNotchHeight,
             "Maximum height should be greater than or equal to default height"
         )
     }
@@ -139,54 +139,53 @@ final class AppConstantsTests: XCTestCase {
         XCTAssertGreaterThan(AppConstants.VirtualNotch.maxHeight, 0)
     }
 
-    // MARK: - Timing Constants
+    // MARK: - Timing Constants (canonical source: AnimationConstants)
 
     func test_timing_hoverDelay_isPositive() {
-        XCTAssertGreaterThan(AppConstants.Timing.hoverDelay, 0)
+        XCTAssertGreaterThan(AnimationConstants.defaultHoverDelay, 0)
     }
 
     func test_timing_hoverDelay_isReasonable() {
-        // Hover delay should be under 1 second for responsiveness.
-        XCTAssertLessThanOrEqual(AppConstants.Timing.hoverDelay, 1.0,
+        XCTAssertLessThanOrEqual(AnimationConstants.defaultHoverDelay, 1.0,
                                   "Hover delay should be 1 second or less")
     }
 
     func test_timing_collapseDelay_isPositive() {
-        XCTAssertGreaterThan(AppConstants.Timing.collapseDelay, 0)
+        XCTAssertGreaterThan(AnimationConstants.defaultCollapseDelay, 0)
     }
 
     func test_timing_collapseDelay_greaterThanHoverDelay() {
         XCTAssertGreaterThan(
-            AppConstants.Timing.collapseDelay,
-            AppConstants.Timing.hoverDelay,
+            AnimationConstants.defaultCollapseDelay,
+            AnimationConstants.defaultHoverDelay,
             "Collapse delay should be longer than hover delay"
         )
     }
 
     func test_timing_sneakPeekDuration_isPositive() {
-        XCTAssertGreaterThan(AppConstants.Timing.sneakPeekDuration, 0)
+        XCTAssertGreaterThan(AnimationConstants.defaultSneakPeekDuration, 0)
     }
 
     func test_timing_sneakPeekDuration_isReasonable() {
-        let duration = AppConstants.Timing.sneakPeekDuration
+        let duration = AnimationConstants.defaultSneakPeekDuration
         XCTAssertGreaterThanOrEqual(duration, 1.0, "Sneak peek should last at least 1 second")
         XCTAssertLessThanOrEqual(duration, 10.0, "Sneak peek should last no more than 10 seconds")
     }
 
     func test_timing_hudDuration_isPositive() {
-        XCTAssertGreaterThan(AppConstants.Timing.hudDuration, 0)
+        XCTAssertGreaterThan(AnimationConstants.defaultHUDDuration, 0)
     }
 
     func test_timing_hudDuration_isReasonable() {
-        let duration = AppConstants.Timing.hudDuration
+        let duration = AnimationConstants.defaultHUDDuration
         XCTAssertGreaterThanOrEqual(duration, 0.5, "HUD should last at least 0.5 seconds")
         XCTAssertLessThanOrEqual(duration, 5.0, "HUD should last no more than 5 seconds")
     }
 
     func test_timing_hudDuration_lessThanOrEqualSneakPeek() {
         XCTAssertLessThanOrEqual(
-            AppConstants.Timing.hudDuration,
-            AppConstants.Timing.sneakPeekDuration,
+            AnimationConstants.defaultHUDDuration,
+            AnimationConstants.defaultSneakPeekDuration,
             "HUD duration should be shorter than or equal to sneak peek duration"
         )
     }

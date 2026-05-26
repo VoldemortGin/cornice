@@ -216,10 +216,7 @@ final class MediaPlayerViewModel {
 
     private func triggerSneakPeekForTrackChange(title: String, artist: String) {
         let event = SneakPeekEvent.trackChange(title: title, artist: artist)
-        let coordinator = ViewCoordinator.shared
-        for (_, vm) in coordinator.viewModels {
-            vm.showSneakPeek(event)
-        }
+        ViewCoordinator.shared.routeSneakPeek(event, toAll: true)
     }
 
     // MARK: - Helpers

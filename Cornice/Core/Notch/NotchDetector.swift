@@ -77,7 +77,7 @@ final class NotchDetector {
     /// Computes full geometry info for a given screen.
     static func geometryInfo(
         for screen: ScreenProviding,
-        heightMode: NotchHeightMode = .matchMenuBar
+        heightMode: NotchHeightMode = .matchNotch
     ) -> NotchGeometryInfo {
         let hasPhysical = hasNotch(screen: screen)
         let width = notchWidth(for: screen)

@@ -2,6 +2,22 @@ import AppKit
 import CoreAudio
 import AudioToolbox
 
+// MARK: - Protocols
+
+protocol VolumeControlling: AnyObject {
+    var volume: Float { get set }
+    var isMuted: Bool { get set }
+    var onVolumeChanged: ((Float) -> Void)? { get set }
+    func adjustVolume(by step: Float)
+    func playVolumeTick()
+}
+
+protocol BrightnessControlling: AnyObject {
+    var brightness: Double { get set }
+    var isAvailable: Bool { get }
+    func adjustBrightness(by step: Double)
+}
+
 // MARK: - Media Key Interceptor
 
 final class MediaKeyInterceptor: @unchecked Sendable {
@@ -143,7 +159,7 @@ final class MediaKeyInterceptor: @unchecked Sendable {
 
 // MARK: - Volume Controller
 
-final class VolumeController: @unchecked Sendable {
+final class VolumeController: VolumeControlling, @unchecked Sendable {
     private var listenerBlock: AudioObjectPropertyListenerBlock?
     private var deviceListenerBlock: AudioObjectPropertyListenerBlock?
     private var currentDeviceID: AudioDeviceID = 0
@@ -335,7 +351,7 @@ final class VolumeController: @unchecked Sendable {
 
 // MARK: - Brightness Controller
 
-final class BrightnessController: @unchecked Sendable {
+final class BrightnessController: BrightnessControlling, @unchecked Sendable {
     private typealias GetBrightnessFn = @convention(c) (CGDirectDisplayID) -> Double
     private typealias SetBrightnessFn = @convention(c) (CGDirectDisplayID, Double) -> Void
 

@@ -31,7 +31,7 @@ struct CameraPreviewRepresentable: NSViewRepresentable {
 }
 
 struct MirrorView: View {
-    let cameraService: CameraService
+    let cameraService: any CameraProviding
     let isCompact: Bool
 
     @Default(.mirrorFlipped) private var isMirrored

@@ -1,11 +1,28 @@
 import AppKit
 import SwiftUI
+import Defaults
+
+/// Protocol seam for ViewCoordinator, enabling testability via fresh instances.
+@MainActor
+protocol ViewCoordinating: AnyObject {
+    var viewModels: [String: NotchViewModel] { get }
+    var activeScreenUUID: String? { get }
+    var hudEvent: SneakPeekEvent? { get }
+    var currentTab: String { get set }
+    var activeViewModel: NotchViewModel? { get }
+
+    func setupForCurrentScreens()
+    func updateActiveScreen(mouseLocation: NSPoint)
+    func routeSneakPeek(_ event: SneakPeekEvent, toAll: Bool)
+    func showHUD(_ event: SneakPeekEvent)
+    func clearHUD()
+}
 
 /// Global singleton that coordinates all notch panels across screens.
 /// Manages per-screen ViewModels, routes system events, and tracks screen changes.
 @MainActor
 @Observable
-final class ViewCoordinator {
+final class ViewCoordinator: ViewCoordinating {
     static let shared = ViewCoordinator()
 
     /// Screen UUID -> NotchViewModel mapping.
@@ -23,7 +40,7 @@ final class ViewCoordinator {
     @ObservationIgnored
     private var screenObserver: NSObjectProtocol?
 
-    private init() {
+    init() {
         observeScreenChanges()
     }
 
@@ -41,8 +58,9 @@ final class ViewCoordinator {
                 // Keep existing view model for this screen.
                 newViewModels[uuid] = existing
             } else {
-                // Create new view model.
-                let geometry = NotchDetector.geometryInfo(for: screen)
+                // Create new view model using the user's height mode setting.
+                let heightMode = Self.resolveHeightMode()
+                let geometry = NotchDetector.geometryInfo(for: screen, heightMode: heightMode)
                 let vm = NotchViewModel(screenUUID: uuid, geometryInfo: geometry)
                 newViewModels[uuid] = vm
             }
@@ -117,6 +135,21 @@ final class ViewCoordinator {
     /// Clears the HUD state.
     func clearHUD() {
         hudEvent = nil
+    }
+
+    // MARK: - Settings Helpers
+
+    /// Converts the persisted NotchHeightSetting to the runtime NotchHeightMode.
+    static func resolveHeightMode() -> NotchHeightMode {
+        let setting = Defaults[.notchHeightMode]
+        switch setting {
+        case .matchNotch:
+            return .matchNotch
+        case .matchMenuBar:
+            return .matchMenuBar
+        case .custom:
+            return .custom(Defaults[.customNotchHeight])
+        }
     }
 
     // MARK: - Cleanup
