@@ -1,0 +1,110 @@
+{
+  "": {
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/primary.swiftdeps"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/ActiveClauseEvaluator.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveClauseEvaluator.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveClauseEvaluator.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveClauseEvaluator~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveClauseEvaluator.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveClauseEvaluator.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/ActiveSyntaxRewriter.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveSyntaxRewriter.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveSyntaxRewriter.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveSyntaxRewriter~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveSyntaxRewriter.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveSyntaxRewriter.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/ActiveSyntaxVisitor.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveSyntaxVisitor.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveSyntaxVisitor.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveSyntaxVisitor~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveSyntaxVisitor.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ActiveSyntaxVisitor.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/BuildConfiguration.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/BuildConfiguration.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/BuildConfiguration.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/BuildConfiguration~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/BuildConfiguration.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/BuildConfiguration.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/ConfiguredRegions.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ConfiguredRegions.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ConfiguredRegions.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ConfiguredRegions~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ConfiguredRegions.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/ConfiguredRegions.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/IfConfigDecl+IfConfig.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigDecl+IfConfig.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigDecl+IfConfig.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigDecl+IfConfig~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigDecl+IfConfig.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigDecl+IfConfig.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/IfConfigDiagnostic.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigDiagnostic.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigDiagnostic.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigDiagnostic~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigDiagnostic.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigDiagnostic.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/IfConfigEvaluation.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigEvaluation.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigEvaluation.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigEvaluation~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigEvaluation.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigEvaluation.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/IfConfigFunctions.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigFunctions.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigFunctions.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigFunctions~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigFunctions.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigFunctions.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/IfConfigRegionState.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigRegionState.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigRegionState.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigRegionState~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigRegionState.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/IfConfigRegionState.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/StaticBuildConfiguration.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/StaticBuildConfiguration.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/StaticBuildConfiguration.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/StaticBuildConfiguration~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/StaticBuildConfiguration.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/StaticBuildConfiguration.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/SyntaxLiteralUtils.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/SyntaxLiteralUtils.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/SyntaxLiteralUtils.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/SyntaxLiteralUtils~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/SyntaxLiteralUtils.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/SyntaxLiteralUtils.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/SyntaxProtocol+IfConfig.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/SyntaxProtocol+IfConfig.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/SyntaxProtocol+IfConfig.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/SyntaxProtocol+IfConfig~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/SyntaxProtocol+IfConfig.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/SyntaxProtocol+IfConfig.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/VersionTuple+Parsing.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/VersionTuple+Parsing.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/VersionTuple+Parsing.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/VersionTuple+Parsing~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/VersionTuple+Parsing.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/VersionTuple+Parsing.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftIfConfig/VersionTuple.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/VersionTuple.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/VersionTuple.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/VersionTuple~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/VersionTuple.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftIfConfig-tool.build/VersionTuple.dia"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "": {
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/primary.swiftdeps"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftParserDiagnostics/DiagnosticExtensions.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/DiagnosticExtensions.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/DiagnosticExtensions.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/DiagnosticExtensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/DiagnosticExtensions.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/DiagnosticExtensions.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftParserDiagnostics/LexerDiagnosticMessages.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/LexerDiagnosticMessages.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/LexerDiagnosticMessages.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/LexerDiagnosticMessages~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/LexerDiagnosticMessages.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/LexerDiagnosticMessages.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftParserDiagnostics/MissingNodesError.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MissingNodesError.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MissingNodesError.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MissingNodesError~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MissingNodesError.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MissingNodesError.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftParserDiagnostics/MissingTokenError.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MissingTokenError.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MissingTokenError.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MissingTokenError~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MissingTokenError.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MissingTokenError.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftParserDiagnostics/MultiLineStringLiteralDiagnosticsGenerator.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MultiLineStringLiteralDiagnosticsGenerator.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MultiLineStringLiteralDiagnosticsGenerator.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MultiLineStringLiteralDiagnosticsGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MultiLineStringLiteralDiagnosticsGenerator.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/MultiLineStringLiteralDiagnosticsGenerator.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftParserDiagnostics/ParseDiagnosticsGenerator.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ParseDiagnosticsGenerator.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ParseDiagnosticsGenerator.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ParseDiagnosticsGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ParseDiagnosticsGenerator.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ParseDiagnosticsGenerator.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftParserDiagnostics/ParserDiagnosticMessages.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ParserDiagnosticMessages.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ParserDiagnosticMessages.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ParserDiagnosticMessages~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ParserDiagnosticMessages.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ParserDiagnosticMessages.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftParserDiagnostics/PresenceUtils.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/PresenceUtils.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/PresenceUtils.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/PresenceUtils~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/PresenceUtils.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/PresenceUtils.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftParserDiagnostics/SyntaxExtensions.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/SyntaxExtensions.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/SyntaxExtensions.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/SyntaxExtensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/SyntaxExtensions.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/SyntaxExtensions.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftParserDiagnostics/Utils.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/Utils.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/Utils.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/Utils~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/Utils.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/Utils.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftParserDiagnostics/generated/ChildNameForDiagnostics.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ChildNameForDiagnostics.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ChildNameForDiagnostics.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ChildNameForDiagnostics~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ChildNameForDiagnostics.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/ChildNameForDiagnostics.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftParserDiagnostics/generated/SyntaxKindNameForDiagnostics.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/SyntaxKindNameForDiagnostics.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/SyntaxKindNameForDiagnostics.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/SyntaxKindNameForDiagnostics~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/SyntaxKindNameForDiagnostics.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/SyntaxKindNameForDiagnostics.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftParserDiagnostics/generated/TokenNameForDiagnostics.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/TokenNameForDiagnostics.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/TokenNameForDiagnostics.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/TokenNameForDiagnostics~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/TokenNameForDiagnostics.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/TokenNameForDiagnostics.dia"
+  }
+}

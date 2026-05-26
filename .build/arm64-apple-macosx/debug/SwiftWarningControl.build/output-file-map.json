@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/primary.swiftdeps"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftWarningControl/DiagnosticGroupInheritanceTree.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/DiagnosticGroupInheritanceTree.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/DiagnosticGroupInheritanceTree.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/DiagnosticGroupInheritanceTree~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/DiagnosticGroupInheritanceTree.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/DiagnosticGroupInheritanceTree.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftWarningControl/SyntaxProtocol+WarningControl.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/SyntaxProtocol+WarningControl.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/SyntaxProtocol+WarningControl.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/SyntaxProtocol+WarningControl~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/SyntaxProtocol+WarningControl.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/SyntaxProtocol+WarningControl.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftWarningControl/WarningControlDeclSyntax.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlDeclSyntax.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlDeclSyntax.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlDeclSyntax~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlDeclSyntax.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlDeclSyntax.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftWarningControl/WarningControlRegionBuilder.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlRegionBuilder.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlRegionBuilder.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlRegionBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlRegionBuilder.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlRegionBuilder.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftWarningControl/WarningControlRegions.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlRegions.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlRegions.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlRegions~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlRegions.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningControlRegions.dia"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/swift-syntax/Sources/SwiftWarningControl/WarningGroupControl.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningGroupControl.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningGroupControl.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningGroupControl~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningGroupControl.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftWarningControl.build/WarningGroupControl.dia"
+  }
+}

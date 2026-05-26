@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestPackageTests.build/primary.swiftdeps"
+  },
+  "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestPackageTests.derived/runner.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestPackageTests.build/runner.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestPackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestPackageTests.build/runner.dia"
+  }
+}

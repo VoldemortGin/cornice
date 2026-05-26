@@ -1,0 +1,180 @@
+{
+  "": {
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/primary.swiftdeps"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Core/AnimationConstantsTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/AnimationConstantsTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/AnimationConstantsTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/AnimationConstantsTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/AnimationConstantsTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/AnimationConstantsTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Core/NotchDetectorTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchDetectorTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchDetectorTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchDetectorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchDetectorTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchDetectorTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Core/NotchGeometryTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchGeometryTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchGeometryTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchGeometryTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchGeometryTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchGeometryTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Core/NotchShapeTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchShapeTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchShapeTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchShapeTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchShapeTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchShapeTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Core/NotchStateTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchStateTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchStateTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchStateTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchStateTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchStateTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Core/NotchViewModelTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchViewModelTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchViewModelTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchViewModelTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchViewModelTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NotchViewModelTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/Calendar/CalendarManagerTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/CalendarManagerTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/CalendarManagerTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/CalendarManagerTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/CalendarManagerTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/CalendarManagerTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/ClipboardHistory/ClipboardMonitorTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ClipboardMonitorTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ClipboardMonitorTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ClipboardMonitorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ClipboardMonitorTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ClipboardMonitorTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/FileShelf/ShelfDropServiceTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ShelfDropServiceTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ShelfDropServiceTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ShelfDropServiceTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ShelfDropServiceTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ShelfDropServiceTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/FileShelf/ShelfStateViewModelTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ShelfStateViewModelTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ShelfStateViewModelTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ShelfStateViewModelTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ShelfStateViewModelTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/ShelfStateViewModelTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/FileShelf/TemporaryFileStorageTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/TemporaryFileStorageTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/TemporaryFileStorageTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/TemporaryFileStorageTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/TemporaryFileStorageTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/TemporaryFileStorageTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/HUDReplacement/HUDManagerTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/HUDManagerTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/HUDManagerTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/HUDManagerTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/HUDManagerTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/HUDManagerTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/HUDReplacement/MediaKeyInterceptorTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MediaKeyInterceptorTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MediaKeyInterceptorTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MediaKeyInterceptorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MediaKeyInterceptorTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MediaKeyInterceptorTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/HUDReplacement/VolumeControllerTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/VolumeControllerTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/VolumeControllerTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/VolumeControllerTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/VolumeControllerTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/VolumeControllerTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/MediaPlayer/MediaControllerTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MediaControllerTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MediaControllerTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MediaControllerTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MediaControllerTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MediaControllerTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/MediaPlayer/MusicManagerTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MusicManagerTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MusicManagerTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MusicManagerTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MusicManagerTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MusicManagerTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/QuickApps/QuickAppsManagerTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/QuickAppsManagerTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/QuickAppsManagerTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/QuickAppsManagerTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/QuickAppsManagerTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/QuickAppsManagerTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/SystemMonitor/BatteryMonitorTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/BatteryMonitorTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/BatteryMonitorTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/BatteryMonitorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/BatteryMonitorTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/BatteryMonitorTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/SystemMonitor/CPUMonitorTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/CPUMonitorTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/CPUMonitorTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/CPUMonitorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/CPUMonitorTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/CPUMonitorTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/SystemMonitor/MemoryMonitorTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MemoryMonitorTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MemoryMonitorTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MemoryMonitorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MemoryMonitorTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MemoryMonitorTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Features/SystemMonitor/NetworkMonitorTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NetworkMonitorTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NetworkMonitorTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NetworkMonitorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NetworkMonitorTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/NetworkMonitorTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Settings/SettingsManagerTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/SettingsManagerTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/SettingsManagerTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/SettingsManagerTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/SettingsManagerTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/SettingsManagerTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/Settings/SettingsTests.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/SettingsTests.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/SettingsTests.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/SettingsTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/SettingsTests.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/SettingsTests.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/TestHelpers/MockScreen.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MockScreen.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MockScreen.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MockScreen~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MockScreen.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/MockScreen.dia"
+  },
+  "/Users/linhan/startup/crest/CrestTests/TestHelpers/TestTypes.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/TestTypes.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/TestTypes.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/TestTypes~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/TestTypes.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/CrestTests.build/TestTypes.dia"
+  }
+}

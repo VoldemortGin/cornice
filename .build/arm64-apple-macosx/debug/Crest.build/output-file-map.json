@@ -1,0 +1,425 @@
+{
+  "": {
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/primary.swiftdeps"
+  },
+  "/Users/linhan/startup/crest/Crest/App/AppDelegate.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AppDelegate.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AppDelegate.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AppDelegate.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/App/CrestApp.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CrestApp.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CrestApp.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CrestApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CrestApp.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CrestApp.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/Animation/AnimationConstants.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AnimationConstants.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AnimationConstants.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AnimationConstants~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AnimationConstants.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AnimationConstants.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/Animation/NotchAnimator.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchAnimator.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchAnimator.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchAnimator~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchAnimator.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchAnimator.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/Notch/NotchDetector.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchDetector.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchDetector.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchDetector~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchDetector.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchDetector.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/Notch/NotchGeometry.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchGeometry.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchGeometry.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchGeometry~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchGeometry.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchGeometry.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/Notch/NotchGeometryInfo.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchGeometryInfo.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchGeometryInfo.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchGeometryInfo~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchGeometryInfo.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchGeometryInfo.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/Notch/NotchHeightMode.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchHeightMode.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchHeightMode.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchHeightMode~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchHeightMode.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchHeightMode.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/Notch/NotchShape.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchShape.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchShape.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchShape~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchShape.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchShape.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/Notch/ScreenDescriptor.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ScreenDescriptor.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ScreenDescriptor.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ScreenDescriptor~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ScreenDescriptor.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ScreenDescriptor.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/Permissions/PermissionsManager.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/PermissionsManager.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/PermissionsManager.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/PermissionsManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/PermissionsManager.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/PermissionsManager.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/State/NotchState.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchState.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchState.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchState~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchState.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchState.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/State/NotchViewModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchViewModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchViewModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchViewModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchViewModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/State/ViewCoordinator.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ViewCoordinator.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ViewCoordinator.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ViewCoordinator~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ViewCoordinator.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ViewCoordinator.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/Window/NotchPanel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchPanel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchPanel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchPanel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchPanel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchPanel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Core/Window/NotchPanelController.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchPanelController.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchPanelController.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchPanelController~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchPanelController.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NotchPanelController.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/AirDrop/Models/AirDropModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/AirDrop/Services/AirDropMonitor.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropMonitor.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropMonitor.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropMonitor~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropMonitor.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropMonitor.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/AirDrop/Views/AirDropView.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropView.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropView.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropView~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropView.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AirDropView.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/Calendar/Models/CalendarModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/Calendar/Services/CalendarService.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarService.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarService.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarService~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarService.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarService.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/Calendar/ViewModels/CalendarViewModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarViewModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarViewModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarViewModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarViewModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/Calendar/Views/CalendarView.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarView.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarView.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarView~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarView.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CalendarView.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/ClipboardHistory/Models/ClipboardItem.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardItem.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardItem.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardItem~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardItem.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardItem.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/ClipboardHistory/Services/ClipboardMonitor.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardMonitor.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardMonitor.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardMonitor~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardMonitor.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardMonitor.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/ClipboardHistory/ViewModels/ClipboardHistoryViewModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardHistoryViewModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardHistoryViewModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardHistoryViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardHistoryViewModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardHistoryViewModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/ClipboardHistory/Views/ClipboardHistoryView.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardHistoryView.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardHistoryView.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardHistoryView~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardHistoryView.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ClipboardHistoryView.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/FileShelf/Models/FileShelfModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/FileShelf/Services/FileShelfService.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfService.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfService.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfService~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfService.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfService.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/FileShelf/ViewModels/FileShelfViewModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfViewModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfViewModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfViewModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfViewModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/FileShelf/Views/FileShelfView.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfView.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfView.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfView~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfView.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/FileShelfView.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/HUDReplacement/Models/HUDModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/HUDReplacement/Services/HUDInterceptor.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDInterceptor.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDInterceptor.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDInterceptor~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDInterceptor.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDInterceptor.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/HUDReplacement/ViewModels/HUDViewModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDViewModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDViewModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDViewModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDViewModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/HUDReplacement/Views/HUDView.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDView.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDView.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDView~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDView.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/HUDView.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/MediaPlayer/Models/MediaPlayerModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/MediaPlayer/Services/MediaRemoteService.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaRemoteService.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaRemoteService.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaRemoteService~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaRemoteService.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaRemoteService.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/MediaPlayer/ViewModels/MediaPlayerViewModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerViewModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerViewModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerViewModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerViewModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/MediaPlayer/Views/MediaPlayerView.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerView.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerView.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerView~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerView.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MediaPlayerView.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/Mirror/Models/MirrorModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MirrorModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MirrorModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MirrorModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MirrorModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MirrorModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/Mirror/Services/CameraService.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CameraService.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CameraService.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CameraService~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CameraService.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CameraService.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/Mirror/Views/MirrorView.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MirrorView.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MirrorView.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MirrorView~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MirrorView.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/MirrorView.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/QuickApps/Models/QuickAppModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/QuickApps/ViewModels/QuickAppsViewModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppsViewModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppsViewModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppsViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppsViewModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppsViewModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/QuickApps/Views/QuickAppsView.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppsView.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppsView.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppsView.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/QuickAppsView.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/Shortcuts/Intents/CrestIntents.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CrestIntents.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CrestIntents.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CrestIntents~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CrestIntents.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/CrestIntents.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/Shortcuts/Models/ShortcutModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ShortcutModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ShortcutModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ShortcutModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ShortcutModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ShortcutModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/Shortcuts/Views/ShortcutsView.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ShortcutsView.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ShortcutsView.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ShortcutsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ShortcutsView.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/ShortcutsView.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/SystemMonitor/Models/SystemMonitorModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/SystemMonitor/Services/SystemMetricsService.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMetricsService.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMetricsService.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMetricsService~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMetricsService.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMetricsService.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/SystemMonitor/ViewModels/SystemMonitorViewModel.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorViewModel.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorViewModel.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorViewModel.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorViewModel.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Features/SystemMonitor/Views/SystemMonitorView.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorView.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorView.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorView~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorView.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SystemMonitorView.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Settings/SettingsWindowController.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsWindowController.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsWindowController.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsWindowController~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsWindowController.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsWindowController.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Settings/Views/SettingsView.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsView.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsView.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsView.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsView.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Shared/Constants/AppConstants.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AppConstants.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AppConstants.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AppConstants~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AppConstants.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/AppConstants.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Shared/Constants/SettingsKeys.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsKeys.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsKeys.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsKeys~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsKeys.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/SettingsKeys.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Shared/Extensions/NSScreen+Notch.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NSScreen+Notch.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NSScreen+Notch.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NSScreen+Notch~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NSScreen+Notch.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/NSScreen+Notch.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Shared/Extensions/View+ConditionalModifier.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/View+ConditionalModifier.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/View+ConditionalModifier.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/View+ConditionalModifier~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/View+ConditionalModifier.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/View+ConditionalModifier.dia"
+  },
+  "/Users/linhan/startup/crest/Crest/Shared/Utilities/Logger.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/Logger.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/Logger.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/Logger~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/Logger.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/Logger.dia"
+  },
+  "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/DerivedSources/resource_bundle_accessor.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/resource_bundle_accessor.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/Crest.build/resource_bundle_accessor.dia"
+  }
+}

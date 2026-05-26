@@ -1,0 +1,152 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "sparkle",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/sparkle-project/Sparkle.git",
+          "name" : "Sparkle"
+        },
+        "path" : "/Users/linhan/startup/crest/.build/artifacts/sparkle/Sparkle/Sparkle.xcframework",
+        "source" : {
+          "checksum" : "b83e37436774556ed055e0244b297ef2c790e0737393bf65bf495fcbba6eed65",
+          "type" : "remote",
+          "url" : "https://github.com/sparkle-project/Sparkle/releases/download/2.9.2/Sparkle-for-Swift-Package-Manager.zip"
+        },
+        "targetName" : "Sparkle"
+      }
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "defaults",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/sindresorhus/Defaults.git",
+          "name" : "Defaults"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "5bfac4928f000fabdbef7e4ed0251399bb0841c9",
+            "version" : "9.0.8"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "Defaults"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "keyboardshortcuts",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/sindresorhus/KeyboardShortcuts.git",
+          "name" : "KeyboardShortcuts"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "1aef85578fdd4f9eaeeb8d53b7b4fc31bf08fe27",
+            "version" : "2.4.0"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "KeyboardShortcuts"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "launchatlogin-modern",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/sindresorhus/LaunchAtLogin-Modern.git",
+          "name" : "LaunchAtLogin"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "a04ec1c363be3627734f6dad757d82f5d4fa8fcc",
+            "version" : "1.1.0"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "LaunchAtLogin-Modern"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "sparkle",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/sparkle-project/Sparkle.git",
+          "name" : "Sparkle"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "6276ba2b404829d139c45ff98427cf90e2efc59b",
+            "version" : "2.9.2"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "Sparkle"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-syntax",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/swiftlang/swift-syntax",
+          "name" : "swift-syntax"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "9de99a78f099e59caf2b2beec65a4c45d54b2081",
+            "version" : "603.0.1"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "swift-syntax"
+      }
+    ],
+    "prebuilts" : [
+      {
+        "cModules" : [
+
+        ],
+        "checkoutPath" : "/Users/linhan/startup/crest/.build/checkouts/swift-syntax",
+        "identity" : "swift-syntax",
+        "includePath" : [
+          "Sources/_SwiftSyntaxCShims/include",
+          "Sources/_SwiftLibraryPluginProviderCShims/include"
+        ],
+        "libraryName" : "MacroSupport",
+        "path" : "/Users/linhan/startup/crest/.build/prebuilts/swift-syntax/603.0.1/swiftlang-6.3.2.1.108-macosx26.5-MacroSupport",
+        "products" : [
+          "swift-syntaxPackageTests",
+          "SwiftBasicFormat",
+          "SwiftCompilerPlugin",
+          "SwiftDiagnostics",
+          "SwiftIDEUtils",
+          "SwiftIfConfig",
+          "SwiftWarningControl",
+          "SwiftLexicalLookup",
+          "SwiftOperators",
+          "SwiftParser",
+          "SwiftParserDiagnostics",
+          "SwiftRefactor",
+          "SwiftSyntax",
+          "SwiftSyntaxBuilder",
+          "SwiftSyntaxMacros",
+          "SwiftSyntaxMacroExpansion",
+          "SwiftSyntaxMacrosTestSupport",
+          "SwiftSyntaxMacrosGenericTestSupport",
+          "_SwiftCompilerPluginMessageHandling",
+          "_SwiftLibraryPluginProvider"
+        ],
+        "version" : "603.0.1"
+      }
+    ]
+  },
+  "version" : 7
+}

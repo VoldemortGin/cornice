@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/LaunchAtLogin.build/primary.swiftdeps"
+  },
+  "/Users/linhan/startup/crest/.build/checkouts/LaunchAtLogin-Modern/Sources/LaunchAtLogin/LaunchAtLogin.swift": {
+    "dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/LaunchAtLogin.build/LaunchAtLogin.d",
+    "object": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/LaunchAtLogin.build/LaunchAtLogin.swift.o",
+    "swiftmodule": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/LaunchAtLogin.build/LaunchAtLogin~partial.swiftmodule",
+    "swift-dependencies": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/LaunchAtLogin.build/LaunchAtLogin.swiftdeps",
+    "diagnostics": "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/LaunchAtLogin.build/LaunchAtLogin.dia"
+  }
+}

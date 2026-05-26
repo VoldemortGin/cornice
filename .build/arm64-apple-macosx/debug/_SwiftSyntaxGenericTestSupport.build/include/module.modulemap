@@ -1,0 +1,3 @@
+module _SwiftSyntaxGenericTestSupport {
+    header "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/_SwiftSyntaxGenericTestSupport.build/include/_SwiftSyntaxGenericTestSupport-Swift.h"
+}

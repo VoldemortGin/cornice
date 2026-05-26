@@ -1,0 +1,95 @@
+name: Crest
+options:
+  bundleIdPrefix: com.crest
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "16.0"
+  minimumXcodeGenVersion: "2.38"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    ENABLE_HARDENED_RUNTIME: YES
+    CODE_SIGN_IDENTITY: "-"
+    CODE_SIGN_STYLE: Automatic
+
+packages:
+  Defaults:
+    url: https://github.com/sindresorhus/Defaults.git
+    from: "9.0.0"
+  KeyboardShortcuts:
+    url: https://github.com/sindresorhus/KeyboardShortcuts.git
+    from: "2.0.0"
+  LaunchAtLogin-Modern:
+    url: https://github.com/sindresorhus/LaunchAtLogin-Modern.git
+    from: "1.1.0"
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle.git
+    from: "2.6.0"
+
+targets:
+  Crest:
+    type: application
+    platform: macOS
+    sources:
+      - path: Crest
+        excludes:
+          - "Resources/Info.plist"
+          - "Resources/Crest.entitlements"
+    resources:
+      - path: Crest/Resources/Assets.xcassets
+      - path: Crest/Resources/Sounds
+        buildPhase: resources
+    dependencies:
+      - package: Defaults
+      - package: KeyboardShortcuts
+      - package: LaunchAtLogin-Modern
+        product: LaunchAtLogin
+      - package: Sparkle
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.crest.app
+        PRODUCT_NAME: Crest
+        PRODUCT_MODULE_NAME: Crest
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        INFOPLIST_FILE: Crest/Resources/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Crest/Resources/Crest.entitlements
+        GENERATE_INFOPLIST_FILE: NO
+        ENABLE_APP_SANDBOX: NO
+        ALWAYS_SEARCH_USER_PATHS: NO
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
+
+  CrestTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: CrestTests
+    dependencies:
+      - target: Crest
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.crest.app.tests
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Crest.app/Contents/MacOS/Crest"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+
+schemes:
+  Crest:
+    build:
+      targets:
+        Crest: all
+        CrestTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - CrestTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

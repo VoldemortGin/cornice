@@ -1,0 +1,3 @@
+module SwiftParserDiagnostics {
+    header "/Users/linhan/startup/crest/.build/arm64-apple-macosx/debug/SwiftParserDiagnostics-tool.build/include/SwiftParserDiagnostics-Swift.h"
+}
