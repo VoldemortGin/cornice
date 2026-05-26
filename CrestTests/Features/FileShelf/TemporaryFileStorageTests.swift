@@ -1,6 +1,6 @@
 import XCTest
 import UniformTypeIdentifiers
-@testable import Niya
+@testable import Crest
 
 final class TemporaryFileStorageTests: XCTestCase {
     private var sut: TemporaryFileStorageService!

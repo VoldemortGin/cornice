@@ -1,6 +1,6 @@
 import XCTest
 import Combine
-@testable import Niya
+@testable import Crest
 
 struct NowPlayingStreamState: Codable {
     let title: String; let artist: String; let album: String?; let artworkData: String?
@@ -23,8 +23,14 @@ final class NowPlayingControllerTests: XCTestCase {
         let j = #"{"artist":"Y","album":null,"artworkData":null,"duration":0,"elapsedTime":0,"playbackRate":0,"timestamp":0}"#
         XCTAssertThrowsError(try JSONDecoder().decode(NowPlayingStreamState.self, from: Data(j.utf8)))
     }
-    func test_playbackRate_0_notPlaying() { XCTAssertFalse(PlaybackState.stub(playbackRate: 0).playbackRate > 0) }
-    func test_playbackRate_1_playing() { XCTAssertTrue(PlaybackState.stub(playbackRate: 1).playbackRate > 0) }
+    func test_playbackRate_0_notPlaying() {
+        let info = NowPlayingInfo(title: "T", artist: "A", album: "Al", artworkData: nil, duration: 240, elapsedTime: 60, playbackRate: 0)
+        XCTAssertFalse(info.isPlaying)
+    }
+    func test_playbackRate_1_playing() {
+        let info = NowPlayingInfo(title: "T", artist: "A", album: "Al", artworkData: nil, duration: 240, elapsedTime: 60, playbackRate: 1)
+        XCTAssertTrue(info.isPlaying)
+    }
     func test_artworkDecode_valid() { XCTAssertNotNil(Data(base64Encoded: Data([0x89]).base64EncodedString())) }
     func test_artworkDecode_invalid() { XCTAssertNil(Data(base64Encoded: "!!!")) }
 }
@@ -39,12 +45,23 @@ final class MediaControllerCommandTests: XCTestCase {
     func test_prev() async throws { try await m.previousTrack(); XCTAssertEqual(m.previousTrackCallCount, 1) }
     func test_seek() async throws { try await m.seek(to: 90.5); XCTAssertEqual(m.seekPosition, 90.5) }
     func test_volume() async throws { try await m.setVolume(0.75); XCTAssertEqual(m.volumeLevel, 0.75) }
-    func test_unsupported() async { m.shouldThrow = .unsupported; do { try await m.play(); XCTFail() } catch let e as MediaControllerError { XCTAssertEqual(e, .unsupported) } catch { XCTFail() } }
+    func test_unsupported() async {
+        m.shouldThrow = .unsupported
+        do {
+            try await m.play()
+            XCTFail()
+        } catch let e as MediaControllerError {
+            switch e {
+            case .unsupported: break // expected
+            default: XCTFail("Expected .unsupported, got \(e)")
+            }
+        } catch {
+            XCTFail("Unexpected error type: \(error)")
+        }
+    }
 }
 
 final class RepeatModeTests: XCTestCase {
     func test_rawValues() { XCTAssertEqual(RepeatMode.off.rawValue, 0); XCTAssertEqual(RepeatMode.all.rawValue, 1); XCTAssertEqual(RepeatMode.one.rawValue, 2) }
-    func test_cycle() { XCTAssertEqual(RepeatMode.off.next(), .all); XCTAssertEqual(RepeatMode.all.next(), .one); XCTAssertEqual(RepeatMode.one.next(), .off) }
+    func test_cycle() { XCTAssertEqual(RepeatMode.off.next, .all); XCTAssertEqual(RepeatMode.all.next, .one); XCTAssertEqual(RepeatMode.one.next, .off) }
 }
-
-extension RepeatMode { func next() -> RepeatMode { switch self { case .off: .all; case .all: .one; case .one: .off } } }

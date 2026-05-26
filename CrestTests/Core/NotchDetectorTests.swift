@@ -1,5 +1,5 @@
 import XCTest
-@testable import Niya
+@testable import Crest
 
 /// Tests for NotchDetector -- the module responsible for determining whether
 /// a given screen has a physical notch, calculating notch dimensions, and
@@ -255,19 +255,25 @@ final class NotchDetectorTests: XCTestCase {
 
     func test_detectGeometry_notchScreen_returnsPhysicalGeometry() {
         let d = ScreenDescriptor.macBookPro14
+        let notchWidth: CGFloat = 200
+        let notchHeight: CGFloat = 38
+        let notchRect = NSRect(x: d.frame.midX - notchWidth / 2, y: d.frame.maxY - notchHeight, width: notchWidth, height: notchHeight)
         let geometry = NotchGeometryInfo(
-            width: 200, height: 38,
-            origin: CGPoint(x: d.frame.midX - 100, y: d.frame.maxY - 38),
-            screenDisplayID: d.displayID,
-            isVirtual: false
+            hasPhysicalNotch: true,
+            notchRect: notchRect,
+            closedSize: CGSize(width: notchWidth, height: notchHeight),
+            openSize: CGSize(width: 640, height: 190),
+            sneakPeekSize: CGSize(width: 400, height: 56),
+            expandedDetailSize: CGSize(width: 700, height: 380),
+            screenFrame: d.frame
         )
         mockDetector.geometryResults[d.displayID] = geometry
 
         let result = mockDetector.geometryResults[d.displayID]
         XCTAssertNotNil(result)
-        XCTAssertFalse(result!.isVirtual)
-        XCTAssertEqual(result!.width, 200, accuracy: 5)
-        XCTAssertEqual(result!.height, 38)
+        XCTAssertTrue(result!.hasPhysicalNotch)
+        XCTAssertEqual(result!.closedSize.width, 200, accuracy: 5)
+        XCTAssertEqual(result!.closedSize.height, 38)
     }
 
     func test_detectGeometry_nonNotchScreen_returnsNil() {
@@ -278,26 +284,38 @@ final class NotchDetectorTests: XCTestCase {
     func test_detectGeometry_notchIsCentered() {
         let d = ScreenDescriptor.macBookPro14
         let notchWidth: CGFloat = 200
+        let notchHeight: CGFloat = 38
+        let notchRect = NSRect(x: d.frame.midX - notchWidth / 2, y: d.frame.maxY - notchHeight, width: notchWidth, height: notchHeight)
         let geometry = NotchGeometryInfo(
-            width: notchWidth, height: 38,
-            origin: CGPoint(x: d.frame.midX - notchWidth / 2, y: d.frame.maxY - 38),
-            screenDisplayID: d.displayID
+            hasPhysicalNotch: true,
+            notchRect: notchRect,
+            closedSize: CGSize(width: notchWidth, height: notchHeight),
+            openSize: CGSize(width: 640, height: 190),
+            sneakPeekSize: CGSize(width: 400, height: 56),
+            expandedDetailSize: CGSize(width: 700, height: 380),
+            screenFrame: d.frame
         )
 
-        let centerX = geometry.origin.x + geometry.width / 2
+        let centerX = geometry.notchRect.midX
         XCTAssertEqual(centerX, d.frame.midX, accuracy: 1)
     }
 
     func test_detectGeometry_notchPinnedToScreenTop() {
         let d = ScreenDescriptor.macBookPro14
+        let notchWidth: CGFloat = 200
         let notchHeight: CGFloat = 38
+        let notchRect = NSRect(x: d.frame.midX - notchWidth / 2, y: d.frame.maxY - notchHeight, width: notchWidth, height: notchHeight)
         let geometry = NotchGeometryInfo(
-            width: 200, height: notchHeight,
-            origin: CGPoint(x: d.frame.midX - 100, y: d.frame.maxY - notchHeight),
-            screenDisplayID: d.displayID
+            hasPhysicalNotch: true,
+            notchRect: notchRect,
+            closedSize: CGSize(width: notchWidth, height: notchHeight),
+            openSize: CGSize(width: 640, height: 190),
+            sneakPeekSize: CGSize(width: 400, height: 56),
+            expandedDetailSize: CGSize(width: 700, height: 380),
+            screenFrame: d.frame
         )
 
-        let topEdge = geometry.origin.y + geometry.height
+        let topEdge = geometry.notchRect.maxY
         XCTAssertEqual(topEdge, d.frame.maxY, accuracy: 0.01)
     }
 

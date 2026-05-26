@@ -1,5 +1,5 @@
 import XCTest
-@testable import Niya
+@testable import Crest
 
 /// Tests for AnimationConstants -- verifies that the spring animation
 /// configurations exist and have the correct parameters as specified in the PRD.

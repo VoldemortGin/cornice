@@ -1,58 +1,96 @@
 import XCTest
 import Combine
-@testable import Niya
+@testable import Crest
 
-@MainActor
+/// Tests for HUD display logic using the production model types directly.
+/// Since HUDViewModel relies on hardware interceptors, we test the model/icon logic.
 final class HUDManagerTests: XCTestCase {
-    private var sut: HUDManager!
-    override func setUp() { super.setUp(); sut = HUDManager() }
-    override func tearDown() { sut = nil; super.tearDown() }
 
-    func test_volumeChange_showsVolumeHUD() { sut.showHUD(.volume, level: 0.75); XCTAssertEqual(sut.activeHUD, .volume); XCTAssertEqual(sut.level, 0.75, accuracy: 0.001) }
-    func test_brightnessChange_showsBrightnessHUD() { sut.showHUD(.brightness, level: 0.6); XCTAssertEqual(sut.activeHUD, .brightness) }
-    func test_kbBrightness_showsKBHUD() { sut.showHUD(.keyboardBrightness, level: 0.4); XCTAssertEqual(sut.activeHUD, .keyboardBrightness) }
-    func test_mute_showsMuted() { sut.showMute(true); XCTAssertTrue(sut.isMuted); XCTAssertEqual(sut.level, 0, accuracy: 0.001) }
-    func test_unmute_showsRestored() { sut.showMute(false); sut.showHUD(.volume, level: 0.75); XCTAssertFalse(sut.isMuted) }
+    // MARK: - HUDState Tests
 
-    func test_autoDismiss() {
-        sut.showHUD(.volume, level: 0.5); XCTAssertNotNil(sut.activeHUD)
-        let e = expectation(description: "dismiss")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { XCTAssertNil(self.sut.activeHUD); e.fulfill() }
-        waitForExpectations(timeout: 3)
-    }
-    func test_rapidUpdates_staysVisible() {
-        let e = expectation(description: "stays")
-        sut.showHUD(.volume, level: 0.5)
-        var count = 0
-        let timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { t in
-            count += 1; self.sut.showHUD(.volume, level: 0.5 + Double(count)*0.0625)
-            if count >= 5 { t.invalidate(); XCTAssertNotNil(self.sut.activeHUD); e.fulfill() }
-        }
-        RunLoop.main.add(timer, forMode: .common); waitForExpectations(timeout: 5)
+    func test_volumeState_creation() {
+        let state = HUDState(type: .volume, value: 0.75, isMuted: false, isVisible: true)
+        XCTAssertEqual(state.type, .volume)
+        XCTAssertEqual(state.value, 0.75, accuracy: 0.001)
+        XCTAssertFalse(state.isMuted)
     }
 
-    func test_icon_volumeMuted() { sut.showMute(true); XCTAssertEqual(sut.iconName, "speaker.slash.fill") }
-    func test_icon_volumeLow() { sut.showHUD(.volume, level: 0.2); XCTAssertEqual(sut.iconName, "speaker.wave.1.fill") }
-    func test_icon_volumeMid() { sut.showHUD(.volume, level: 0.5); XCTAssertEqual(sut.iconName, "speaker.wave.2.fill") }
-    func test_icon_volumeHigh() { sut.showHUD(.volume, level: 0.8); XCTAssertEqual(sut.iconName, "speaker.wave.3.fill") }
-    func test_icon_brightnessLow() { sut.showHUD(.brightness, level: 0.3); XCTAssertEqual(sut.iconName, "sun.min.fill") }
-    func test_icon_brightnessHigh() { sut.showHUD(.brightness, level: 0.7); XCTAssertEqual(sut.iconName, "sun.max.fill") }
-    func test_icon_keyboard() { sut.showHUD(.keyboardBrightness, level: 0.5); XCTAssertEqual(sut.iconName, "keyboard.badge.ellipsis") }
-
-    func test_initial_noHUD() { XCTAssertNil(sut.activeHUD) }
-    func test_switchType() { sut.showHUD(.volume, level: 0.5); sut.showHUD(.brightness, level: 0.7); XCTAssertEqual(sut.activeHUD, .brightness) }
-}
-
-extension HUDManager {
-    func showHUD(_ type: HUDType, level: Double) { activeHUD = type; self.level = level; isMuted = false; scheduleDismiss() }
-    func showMute(_ muted: Bool) { activeHUD = .volume; isMuted = muted; level = muted ? 0 : level; scheduleDismiss() }
-    var iconName: String {
-        guard let h = activeHUD else { return "" }
-        switch h {
-        case .volume: return isMuted || level <= 0 ? "speaker.slash.fill" : level <= 0.33 ? "speaker.wave.1.fill" : level <= 0.66 ? "speaker.wave.2.fill" : "speaker.wave.3.fill"
-        case .brightness: return level <= 0.5 ? "sun.min.fill" : "sun.max.fill"
-        case .keyboardBrightness: return "keyboard.badge.ellipsis"
-        }
+    func test_brightnessState_creation() {
+        let state = HUDState(type: .brightness, value: 0.6, isMuted: false, isVisible: true)
+        XCTAssertEqual(state.type, .brightness)
     }
-    func scheduleDismiss() {}
+
+    func test_keyboardBrightness_creation() {
+        let state = HUDState(type: .keyboardBrightness, value: 0.4, isMuted: false, isVisible: true)
+        XCTAssertEqual(state.type, .keyboardBrightness)
+    }
+
+    func test_muteState_creation() {
+        let state = HUDState(type: .mute, value: 0, isMuted: true, isVisible: true)
+        XCTAssertTrue(state.isMuted)
+        XCTAssertEqual(state.value, 0, accuracy: 0.001)
+    }
+
+    // MARK: - VolumeIcon Tests
+
+    func test_icon_volumeMuted() {
+        XCTAssertEqual(VolumeIcon.forLevel(0, muted: true).systemName, "speaker.slash.fill")
+    }
+    func test_icon_volumeLow() {
+        XCTAssertEqual(VolumeIcon.forLevel(0.2, muted: false).systemName, "speaker.wave.1.fill")
+    }
+    func test_icon_volumeMid() {
+        XCTAssertEqual(VolumeIcon.forLevel(0.5, muted: false).systemName, "speaker.wave.2.fill")
+    }
+    func test_icon_volumeHigh() {
+        XCTAssertEqual(VolumeIcon.forLevel(0.8, muted: false).systemName, "speaker.wave.3.fill")
+    }
+    func test_icon_volumeZero_showsMuted() {
+        XCTAssertEqual(VolumeIcon.forLevel(0, muted: false).systemName, "speaker.slash.fill")
+    }
+
+    // MARK: - BrightnessIcon Tests
+
+    func test_icon_brightnessLow() {
+        XCTAssertEqual(BrightnessIcon.forLevel(0.3).systemName, "sun.min.fill")
+    }
+    func test_icon_brightnessHigh() {
+        XCTAssertEqual(BrightnessIcon.forLevel(0.7).systemName, "sun.max.fill")
+    }
+    func test_icon_brightnessBoundary() {
+        XCTAssertEqual(BrightnessIcon.forLevel(0.5).systemName, "sun.min.fill")
+        XCTAssertEqual(BrightnessIcon.forLevel(0.51).systemName, "sun.max.fill")
+    }
+
+    // MARK: - HUDType Equality
+
+    func test_hudType_equality() {
+        XCTAssertEqual(HUDType.volume, HUDType.volume)
+        XCTAssertNotEqual(HUDType.volume, HUDType.brightness)
+        XCTAssertNotEqual(HUDType.brightness, HUDType.keyboardBrightness)
+    }
+
+    func test_switchType() {
+        var state = HUDState(type: .volume, value: 0.5, isMuted: false, isVisible: true)
+        state = HUDState(type: .brightness, value: 0.7, isMuted: false, isVisible: true)
+        XCTAssertEqual(state.type, .brightness)
+    }
+
+    // MARK: - HIDKeyEvent Tests
+
+    func test_stepSize_normal() {
+        let event = HIDKeyEvent(keyCode: .soundUp, isKeyDown: true, isRepeat: false, hasOption: false, hasShift: false)
+        XCTAssertEqual(event.stepSize, 1.0 / 16.0, accuracy: 0.001)
+    }
+
+    func test_stepSize_fineAdjustment() {
+        let event = HIDKeyEvent(keyCode: .soundUp, isKeyDown: true, isRepeat: false, hasOption: true, hasShift: true)
+        XCTAssertEqual(event.stepSize, 1.0 / 64.0, accuracy: 0.001)
+        XCTAssertTrue(event.isFineAdjustment)
+    }
+
+    func test_shouldOpenSettings() {
+        let event = HIDKeyEvent(keyCode: .soundUp, isKeyDown: true, isRepeat: false, hasOption: true, hasShift: false)
+        XCTAssertTrue(event.shouldOpenSettings)
+    }
 }

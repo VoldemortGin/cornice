@@ -1,5 +1,5 @@
 import XCTest
-@testable import Niya
+@testable import Crest
 
 final class MockVolumeCtrl {
     private var _vol: Float = 0.5; private var _muted = false; private var preMute: Float = 0.5

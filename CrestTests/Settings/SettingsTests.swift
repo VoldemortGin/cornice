@@ -1,5 +1,5 @@
 import Testing
-@testable import Niya
+@testable import Crest
 
 @Suite("Settings Tests")
 struct SettingsTests {

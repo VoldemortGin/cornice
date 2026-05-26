@@ -1,5 +1,5 @@
 import XCTest
-@testable import Niya
+@testable import Crest
 
 /// Tests for the NotchState machine -- validates all allowed transitions between
 /// the four states (closed, sneakPeek, open, expandedDetail), rejects invalid

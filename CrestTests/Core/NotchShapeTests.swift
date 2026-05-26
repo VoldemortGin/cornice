@@ -1,6 +1,6 @@
 import XCTest
 import SwiftUI
-@testable import Niya
+@testable import Crest
 
 /// Tests for NotchShape -- the custom SwiftUI Shape that defines the notch
 /// outline with independently animatable top and bottom corner radii.
@@ -13,13 +13,13 @@ final class NotchShapeTests: XCTestCase {
 
     func test_notchShape_conformsToShapeProtocol() {
         // NotchShape must conform to Shape so it can be used with .clipShape(), .background(), etc.
-        let shape = NotchShape()
+        let shape = NotchShape(topCornerRadius: 10, bottomCornerRadius: 14)
         // If this compiles, NotchShape conforms to Shape.
         XCTAssertNotNil(shape, "NotchShape should be instantiable")
     }
 
     func test_notchShape_canGeneratePath() {
-        let shape = NotchShape()
+        let shape = NotchShape(topCornerRadius: 10, bottomCornerRadius: 14)
         let rect = CGRect(x: 0, y: 0, width: 200, height: 38)
         let path = shape.path(in: rect)
 
@@ -27,7 +27,7 @@ final class NotchShapeTests: XCTestCase {
     }
 
     func test_notchShape_pathBoundedByRect() {
-        let shape = NotchShape()
+        let shape = NotchShape(topCornerRadius: 10, bottomCornerRadius: 14)
         let rect = CGRect(x: 0, y: 0, width: 200, height: 38)
         let path = shape.path(in: rect)
         let pathBounds = path.boundingRect
@@ -45,7 +45,7 @@ final class NotchShapeTests: XCTestCase {
     }
 
     func test_notchShape_pathIsClosed() {
-        let shape = NotchShape()
+        let shape = NotchShape(topCornerRadius: 10, bottomCornerRadius: 14)
         let rect = CGRect(x: 0, y: 0, width: 200, height: 38)
         let path = shape.path(in: rect)
 
@@ -56,16 +56,10 @@ final class NotchShapeTests: XCTestCase {
 
     // MARK: - AnimatableData Property (NS-002)
 
-    // These tests verify the contract that NotchShape exposes animatableData
-    // so SwiftUI can interpolate corner radii during state transitions.
-    // The actual animatableData implementation requires topCornerRadius and
-    // bottomCornerRadius as the production code evolves from the current stub.
-
     func test_notchShape_defaultCornerRadius_isReasonable() {
-        let shape = NotchShape()
-        // The current stub uses a single cornerRadius property.
-        // The production version should have topCornerRadius and bottomCornerRadius.
-        XCTAssertGreaterThan(shape.cornerRadius, 0, "Default corner radius should be positive")
+        let shape = NotchShape(topCornerRadius: 10, bottomCornerRadius: 14)
+        XCTAssertGreaterThan(shape.topCornerRadius, 0, "Top corner radius should be positive")
+        XCTAssertGreaterThan(shape.bottomCornerRadius, 0, "Bottom corner radius should be positive")
     }
 
     func test_notchShape_cornerRadiusValues_forClosedState() {
@@ -181,7 +175,7 @@ final class NotchShapeTests: XCTestCase {
         let notchHeight: CGFloat = 38
         let closedRect = CGRect(x: 0, y: 0, width: notchWidth, height: notchHeight)
 
-        let shape = NotchShape()
+        let shape = NotchShape(topCornerRadius: 10, bottomCornerRadius: 14)
         let path = shape.path(in: closedRect)
 
         XCTAssertFalse(path.isEmpty)
@@ -191,7 +185,7 @@ final class NotchShapeTests: XCTestCase {
 
     func test_openShape_dimensions_default640x190() {
         let openRect = CGRect(x: 0, y: 0, width: 640, height: 190)
-        let shape = NotchShape()
+        let shape = NotchShape(topCornerRadius: 18, bottomCornerRadius: 24)
         let path = shape.path(in: openRect)
 
         XCTAssertFalse(path.isEmpty)
@@ -202,7 +196,7 @@ final class NotchShapeTests: XCTestCase {
     // MARK: - Path Generation Edge Cases
 
     func test_notchShape_zeroRect_producesEmptyOrDegeneratePath() {
-        let shape = NotchShape()
+        let shape = NotchShape(topCornerRadius: 10, bottomCornerRadius: 14)
         let zeroRect = CGRect.zero
         let path = shape.path(in: zeroRect)
 
@@ -215,7 +209,7 @@ final class NotchShapeTests: XCTestCase {
     }
 
     func test_notchShape_verySmallRect_doesNotCrash() {
-        let shape = NotchShape()
+        let shape = NotchShape(topCornerRadius: 10, bottomCornerRadius: 14)
         let tinyRect = CGRect(x: 0, y: 0, width: 1, height: 1)
         let path = shape.path(in: tinyRect)
 
@@ -224,7 +218,7 @@ final class NotchShapeTests: XCTestCase {
     }
 
     func test_notchShape_veryLargeRect_doesNotCrash() {
-        let shape = NotchShape()
+        let shape = NotchShape(topCornerRadius: 18, bottomCornerRadius: 24)
         let largeRect = CGRect(x: 0, y: 0, width: 5000, height: 3000)
         let path = shape.path(in: largeRect)
 
@@ -232,7 +226,7 @@ final class NotchShapeTests: XCTestCase {
     }
 
     func test_notchShape_negativeOrigin_producesValidPath() {
-        let shape = NotchShape()
+        let shape = NotchShape(topCornerRadius: 10, bottomCornerRadius: 14)
         let rect = CGRect(x: -100, y: -50, width: 200, height: 38)
         let path = shape.path(in: rect)
 
@@ -248,5 +242,31 @@ final class NotchShapeTests: XCTestCase {
         let expectedBackground = "Color.black"
         XCTAssertEqual(expectedBackground, "Color.black",
                        "Closed state background should be solid black per PRD-01 Section 3.4")
+    }
+
+    // MARK: - Factory Methods
+
+    func test_notchShape_closedFactory() {
+        let shape = NotchShape.closed()
+        XCTAssertEqual(shape.topCornerRadius, AnimationConstants.CornerRadii.closedTop)
+        XCTAssertEqual(shape.bottomCornerRadius, AnimationConstants.CornerRadii.closedBottom)
+    }
+
+    func test_notchShape_openFactory() {
+        let shape = NotchShape.open()
+        XCTAssertEqual(shape.topCornerRadius, AnimationConstants.CornerRadii.openTop)
+        XCTAssertEqual(shape.bottomCornerRadius, AnimationConstants.CornerRadii.openBottom)
+    }
+
+    func test_notchShape_sneakPeekFactory() {
+        let shape = NotchShape.sneakPeek()
+        XCTAssertEqual(shape.topCornerRadius, AnimationConstants.CornerRadii.sneakPeekTop)
+        XCTAssertEqual(shape.bottomCornerRadius, AnimationConstants.CornerRadii.sneakPeekBottom)
+    }
+
+    func test_notchShape_expandedDetailFactory() {
+        let shape = NotchShape.expandedDetail()
+        XCTAssertEqual(shape.topCornerRadius, AnimationConstants.CornerRadii.expandedDetailTop)
+        XCTAssertEqual(shape.bottomCornerRadius, AnimationConstants.CornerRadii.expandedDetailBottom)
     }
 }

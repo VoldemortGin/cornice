@@ -1,5 +1,5 @@
 import XCTest
-@testable import Niya
+@testable import Crest
 
 final class MockNSPasteboard {
     var currentChangeCount = 0; var types: [String] = []; var stringContent: String?

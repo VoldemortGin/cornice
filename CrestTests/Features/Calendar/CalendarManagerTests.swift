@@ -1,5 +1,5 @@
 import XCTest
-@testable import Niya
+@testable import Crest
 
 final class MockEKEventStore {
     var events: [MockCalendarEvent] = []

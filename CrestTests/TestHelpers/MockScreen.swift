@@ -1,72 +1,15 @@
 import AppKit
-@testable import Niya
+@testable import Crest
 
-// Production types ScreenDescriptor, NotchGeometryInfo, and NotchHeightMode
-// are defined in the Niya target. Do NOT redefine them here.
-
-// MARK: - ScreenProviding Protocol
-
-/// Abstraction over NSScreen enumeration for testability.
-protocol ScreenProviding: AnyObject {
-    var screens: [NSScreen] { get }
-    func addObserver(_ handler: @escaping () -> Void) -> Any
-}
-
-// MARK: - SystemScreenProvider
-
-final class SystemScreenProvider: ScreenProviding {
-    var screens: [NSScreen] { NSScreen.screens }
-
-    func addObserver(_ handler: @escaping () -> Void) -> Any {
-        NotificationCenter.default.addObserver(
-            forName: NSApplication.didChangeScreenParametersNotification,
-            object: nil,
-            queue: .main
-        ) { _ in handler() }
-    }
-}
-
-// MARK: - MockScreenProvider
-
-final class MockScreenProvider: ScreenProviding {
-    var mockScreens: [NSScreen] = []
-    var screens: [NSScreen] { mockScreens }
-    private var handlers: [() -> Void] = []
-
-    func addObserver(_ handler: @escaping () -> Void) -> Any {
-        handlers.append(handler)
-        return handlers.count - 1
-    }
-
-    func simulateScreenChange(screens: [NSScreen]) {
-        mockScreens = screens
-        handlers.forEach { $0() }
-    }
-}
-
-// MARK: - NotchDetecting Protocol
-
-/// Protocol abstracting notch detection for mock injection.
-protocol NotchDetecting {
-    func hasNotch(screen: NSScreen) -> Bool
-    func detectGeometry(for screen: NSScreen) -> NotchGeometryInfo?
-}
+// Production types ScreenDescriptor, NotchGeometryInfo, NotchHeightMode,
+// and the ScreenProviding protocol are defined in the Crest target.
+// Do NOT redefine them here.
 
 // MARK: - MockNotchDetector
 
-final class MockNotchDetector: NotchDetecting {
+final class MockNotchDetector {
     var hasNotchResults: [CGDirectDisplayID: Bool] = [:]
     var geometryResults: [CGDirectDisplayID: NotchGeometryInfo] = [:]
-
-    func hasNotch(screen: NSScreen) -> Bool {
-        let displayID = (screen.deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as? CGDirectDisplayID) ?? 0
-        return hasNotchResults[displayID] ?? false
-    }
-
-    func detectGeometry(for screen: NSScreen) -> NotchGeometryInfo? {
-        let displayID = (screen.deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as? CGDirectDisplayID) ?? 0
-        return geometryResults[displayID]
-    }
 }
 
 // MARK: - MockNotchPanel

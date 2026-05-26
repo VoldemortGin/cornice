@@ -1,6 +1,6 @@
 import XCTest
 import UniformTypeIdentifiers
-@testable import Niya
+@testable import Crest
 
 final class MockTemporaryFileStorage: TemporaryFileStorageServiceProtocol {
     var storedData: [(Data, String?)] = []
@@ -26,7 +26,7 @@ final class MockTemporaryFileStorage: TemporaryFileStorageServiceProtocol {
 
 final class MockDropPasteboard: DropPasteboardProviding {
     var fileURLs: [URL] = []; var urls: [URL] = []; var strings: [String] = []
-    var rawDataByType: [String: Data] = []; var availableTypes: [String] = []
+    var rawDataByType: [String: Data] = [:]; var availableTypes: [String] = []
 }
 
 final class ShelfDropServiceTests: XCTestCase {

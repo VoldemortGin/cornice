@@ -181,40 +181,31 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             guard let viewModel = ViewCoordinator.shared.viewModels[uuid] else { continue }
             let geometryInfo = viewModel.geometryInfo
 
-            // Coarse check: is the mouse in the top region of this screen?
-            let topRegion = NSRect(
-                x: geometryInfo.screenFrame.minX,
-                y: geometryInfo.screenFrame.maxY - 50,
-                width: geometryInfo.screenFrame.width,
-                height: 50
-            )
-            guard topRegion.contains(mouseLocation) else {
-                // If mouse left the top region and we're expanded, start collapse.
-                if viewModel.isHovered {
-                    viewModel.onHoverExit()
-                }
-                continue
-            }
-
-            // Fine check: is the mouse in the activation rect?
-            let activationRect = geometryInfo.activationRect
-            if activationRect.contains(mouseLocation) {
-                if !viewModel.isHovered {
-                    viewModel.onHoverEnter()
-                }
-            } else if viewModel.state.isExpanded {
-                // Check expanded area with margin.
+            if viewModel.state.isExpanded {
+                // When expanded, use the full expanded rect (with margin) for containment check.
                 let expandedRect = geometryInfo.expandedRect(for: viewModel.state)
-                if !expandedRect.contains(mouseLocation) {
+                if expandedRect.contains(mouseLocation) {
+                    if !viewModel.isHovered {
+                        viewModel.onHoverEnter()
+                    }
+                } else {
                     if viewModel.isHovered {
                         viewModel.onHoverExit()
                     }
                 }
-            } else if viewModel.isHovered {
-                viewModel.onHoverExit()
+            } else {
+                // When closed/sneakPeek, use the activation rect for hover detection.
+                let activationRect = geometryInfo.activationRect
+                if activationRect.contains(mouseLocation) {
+                    if !viewModel.isHovered {
+                        viewModel.onHoverEnter()
+                    }
+                } else if viewModel.isHovered {
+                    viewModel.onHoverExit()
+                }
             }
 
-            // Update panel frame if state changed.
+            // Update panel frame to match current state.
             controller.updateFrame()
         }
     }

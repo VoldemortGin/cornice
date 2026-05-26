@@ -1,5 +1,5 @@
 import XCTest
-@testable import Niya
+@testable import Crest
 
 /// Tests for NotchViewModel -- the per-screen view model that drives the notch
 /// UI state, animation parameters, timing delays, and size calculations.

@@ -1,5 +1,5 @@
 import XCTest
-@testable import Niya
+@testable import Crest
 
 /// Tests for NotchGeometry -- the module that computes closed/open notch sizes,
 /// handles coordinate conversions, and produces virtual-notch fallback dimensions.
@@ -154,23 +154,29 @@ final class NotchGeometryTests: XCTestCase {
     func test_virtualNotch_geometryMarkedAsVirtual() {
         let d = ScreenDescriptor.external4K
         let geometry = NotchGeometryInfo(
-            width: 230, height: 32,
-            origin: CGPoint(x: d.frame.midX - 115, y: d.frame.maxY - 32),
-            screenDisplayID: d.displayID,
-            isVirtual: true
+            hasPhysicalNotch: false,
+            notchRect: NSRect(x: d.frame.midX - 115, y: d.frame.maxY - 32, width: 230, height: 32),
+            closedSize: CGSize(width: 230, height: 32),
+            openSize: CGSize(width: 640, height: 190),
+            sneakPeekSize: CGSize(width: 400, height: 56),
+            expandedDetailSize: CGSize(width: 700, height: 380),
+            screenFrame: d.frame
         )
-        XCTAssertTrue(geometry.isVirtual)
+        XCTAssertFalse(geometry.hasPhysicalNotch)
     }
 
     func test_physicalNotch_geometryNotMarkedAsVirtual() {
         let d = ScreenDescriptor.macBookPro14
         let geometry = NotchGeometryInfo(
-            width: 200, height: 38,
-            origin: CGPoint(x: d.frame.midX - 100, y: d.frame.maxY - 38),
-            screenDisplayID: d.displayID,
-            isVirtual: false
+            hasPhysicalNotch: true,
+            notchRect: NSRect(x: d.frame.midX - 100, y: d.frame.maxY - 38, width: 200, height: 38),
+            closedSize: CGSize(width: 200, height: 38),
+            openSize: CGSize(width: 640, height: 190),
+            sneakPeekSize: CGSize(width: 400, height: 56),
+            expandedDetailSize: CGSize(width: 700, height: 380),
+            screenFrame: d.frame
         )
-        XCTAssertFalse(geometry.isVirtual)
+        XCTAssertTrue(geometry.hasPhysicalNotch)
     }
 
     // MARK: - Expanded Detail Size (CL-009)
@@ -282,17 +288,16 @@ final class NotchGeometryTests: XCTestCase {
     func test_panelFrame_closedState_matchesNotchGeometry() {
         let d = ScreenDescriptor.macBookPro14
         let geometry = NotchGeometryInfo(
-            width: 200, height: 38,
-            origin: CGPoint(x: d.frame.midX - 100, y: d.frame.maxY - 38),
-            screenDisplayID: d.displayID
+            hasPhysicalNotch: true,
+            notchRect: NSRect(x: d.frame.midX - 100, y: d.frame.maxY - 38, width: 200, height: 38),
+            closedSize: CGSize(width: 200, height: 38),
+            openSize: CGSize(width: 640, height: 190),
+            sneakPeekSize: CGSize(width: 400, height: 56),
+            expandedDetailSize: CGSize(width: 700, height: 380),
+            screenFrame: d.frame
         )
 
-        let panelFrame = NSRect(
-            x: geometry.origin.x,
-            y: geometry.origin.y,
-            width: geometry.width,
-            height: geometry.height
-        )
+        let panelFrame = geometry.notchRect
 
         XCTAssertEqual(panelFrame.width, 200)
         XCTAssertEqual(panelFrame.height, 38)

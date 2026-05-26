@@ -1,36 +1,7 @@
 import XCTest
-@testable import Niya
+@testable import Crest
 
-// MARK: - HID Key Event Types (to be defined in production code)
-
-enum HIDKeyCode: Int {
-    case soundUp = 0
-    case soundDown = 1
-    case brightnessUp = 2
-    case brightnessDown = 3
-    case mute = 7
-    case keyboardBrightnessUp = 21
-    case keyboardBrightnessDown = 22
-}
-
-struct HIDKeyEvent {
-    let keyCode: HIDKeyCode
-    let isKeyDown: Bool
-    let isRepeat: Bool
-    let hasOption: Bool
-    let hasShift: Bool
-
-    var stepSize: Float {
-        if hasOption && hasShift {
-            return 1.0 / 64.0 // Fine adjustment
-        }
-        return 1.0 / 16.0 // Standard adjustment
-    }
-
-    var isOpenSettings: Bool {
-        hasOption && !hasShift
-    }
-}
+// Uses the production HIDKeyEvent from Crest/Features/HUDReplacement/Models/HUDModel.swift.
 
 // MARK: - MediaKeyInterceptor Tests
 
@@ -100,7 +71,6 @@ final class MediaKeyInterceptorTests: XCTestCase {
     // MARK: - Key State Detection (Down / Up)
 
     func test_keyDown_detectedFromFlags() {
-        // Key down: bit pattern in flags includes 0x0A
         let keyFlags = 0x0A
         let isKeyDown = (keyFlags & 0x0A) != 0
 
@@ -108,25 +78,21 @@ final class MediaKeyInterceptorTests: XCTestCase {
     }
 
     func test_keyUp_detectedFromFlags() {
-        // Key up: bit pattern does not include 0x0A
-        let keyFlags = 0x0B // Up event
+        let keyFlags = 0x0B
         let isKeyDown = (keyFlags & 0x0A) == 0x0A
 
-        // The exact bit pattern depends on Apple's encoding
-        // Key up typically has bit 0 set differently
-        // For testing, we verify our parsing logic handles both states
         XCTAssertTrue(true, "Key state detection logic verified")
     }
 
     func test_keyRepeat_detectedFromFlags() {
-        let keyFlags = 0x0A | 0x02 // Down + repeat
+        let keyFlags = 0x0A | 0x02
         let isRepeat = (keyFlags & 0x02) != 0
 
         XCTAssertTrue(isRepeat)
     }
 
     func test_keyNoRepeat_detectedFromFlags() {
-        let keyFlags = 0x0A // Down, no repeat
+        let keyFlags = 0x08
         let isRepeat = (keyFlags & 0x02) != 0
 
         XCTAssertFalse(isRepeat)
@@ -141,7 +107,7 @@ final class MediaKeyInterceptorTests: XCTestCase {
         )
 
         XCTAssertEqual(event.keyCode, .soundUp)
-        XCTAssertFalse(event.isOpenSettings)
+        XCTAssertFalse(event.shouldOpenSettings)
     }
 
     func test_volumeDown_routesToVolumeHandler() {
@@ -192,7 +158,7 @@ final class MediaKeyInterceptorTests: XCTestCase {
             hasOption: true, hasShift: false
         )
 
-        XCTAssertTrue(event.isOpenSettings,
+        XCTAssertTrue(event.shouldOpenSettings,
                       "Option alone + volume should open Sound settings")
     }
 
@@ -202,7 +168,7 @@ final class MediaKeyInterceptorTests: XCTestCase {
             hasOption: true, hasShift: false
         )
 
-        XCTAssertTrue(event.isOpenSettings,
+        XCTAssertTrue(event.shouldOpenSettings,
                       "Option alone + brightness should open Display settings")
     }
 
@@ -212,7 +178,7 @@ final class MediaKeyInterceptorTests: XCTestCase {
             hasOption: false, hasShift: false
         )
 
-        XCTAssertFalse(event.isOpenSettings)
+        XCTAssertFalse(event.shouldOpenSettings)
     }
 
     // MARK: - Option+Shift Fine Adjustment
@@ -243,7 +209,7 @@ final class MediaKeyInterceptorTests: XCTestCase {
             hasOption: true, hasShift: true
         )
 
-        XCTAssertFalse(event.isOpenSettings,
+        XCTAssertFalse(event.shouldOpenSettings,
                        "Option+Shift should NOT open settings (that is Option alone)")
     }
 
@@ -257,15 +223,15 @@ final class MediaKeyInterceptorTests: XCTestCase {
                        "Shift alone should use standard step (fine requires Option+Shift)")
     }
 
-    // MARK: - HIDKeyCode Enum Coverage
+    // MARK: - HIDKeyEvent.KeyCode Enum Coverage
 
     func test_allKeyCodesHaveExpectedRawValues() {
-        XCTAssertEqual(HIDKeyCode.soundUp.rawValue, 0)
-        XCTAssertEqual(HIDKeyCode.soundDown.rawValue, 1)
-        XCTAssertEqual(HIDKeyCode.brightnessUp.rawValue, 2)
-        XCTAssertEqual(HIDKeyCode.brightnessDown.rawValue, 3)
-        XCTAssertEqual(HIDKeyCode.mute.rawValue, 7)
-        XCTAssertEqual(HIDKeyCode.keyboardBrightnessUp.rawValue, 21)
-        XCTAssertEqual(HIDKeyCode.keyboardBrightnessDown.rawValue, 22)
+        XCTAssertEqual(HIDKeyEvent.KeyCode.soundUp.rawValue, 0)
+        XCTAssertEqual(HIDKeyEvent.KeyCode.soundDown.rawValue, 1)
+        XCTAssertEqual(HIDKeyEvent.KeyCode.brightnessUp.rawValue, 2)
+        XCTAssertEqual(HIDKeyEvent.KeyCode.brightnessDown.rawValue, 3)
+        XCTAssertEqual(HIDKeyEvent.KeyCode.mute.rawValue, 7)
+        XCTAssertEqual(HIDKeyEvent.KeyCode.keyboardBrightnessUp.rawValue, 21)
+        XCTAssertEqual(HIDKeyEvent.KeyCode.keyboardBrightnessDown.rawValue, 22)
     }
 }

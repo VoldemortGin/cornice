@@ -1,12 +1,11 @@
 import XCTest
-@testable import Niya
+@testable import Crest
 
-enum ActivationMethod: String, Codable { case hover, click }
-enum NotchHeightMode: String, Codable { case matchNotch, matchMenuBar, custom }
-enum MusicSource: String, Codable { case auto, appleMusic, spotify, nowPlaying }
-enum LogLevel: String, Codable { case debug, info, warning, error }
-enum QuickAppsIconSize: String, Codable { case small, medium, large }
-enum AutoClearDuration: String, Codable { case never, oneHour, fourHours, twelveHours, oneDay, sevenDays }
+// Local test enums that don't conflict with production types
+enum TestActivationMethod: String, Codable { case hover, click }
+enum TestLogLevel: String, Codable { case debug, info, warning, error }
+enum TestQuickAppsIconSize: String, Codable { case small, medium, large }
+enum TestAutoClearDuration: String, Codable { case never, oneHour, fourHours, twelveHours, oneDay, sevenDays }
 
 final class SettingsManagerTests: XCTestCase {
     private let keysToClean = ["menubarIcon","hoverDelay","closeDelay","autoSwitchDisplay","transparency","animationSpeed","cornerRadius","showAlbumArt","showVisualizer","sneakPeekOnTrackChange","sneakPeekDuration","calendarEnabled","calendarLookahead","showDeclinedEvents","hudReplacementEnabled","hudDisplayDuration","lowBatteryThreshold","shelfMaxItems","clipboardMaxEntries","quickAppsEnabled","mirrorEnabled","mirrorFlipped","debugMode","customAccentColor","clipboardExcludedApps","settingsSchemaVersion"]
@@ -49,19 +48,27 @@ final class SettingsManagerTests: XCTestCase {
     // Export/Import
     func test_exportImport_roundTrip() {
         UserDefaults.standard.set(false, forKey: "menubarIcon"); UserDefaults.standard.set(0.4, forKey: "hoverDelay")
-        var dict: [String: Any] = ["menubarIcon": false, "hoverDelay": 0.4, "_exportVersion": 1, "_exportDate": "now"]
+        let dict: [String: Any] = ["menubarIcon": false, "hoverDelay": 0.4, "_exportVersion": 1, "_exportDate": "now"]
         keysToClean.forEach { UserDefaults.standard.removeObject(forKey: $0) } // reset
         for (k, v) in dict where !k.hasPrefix("_") { UserDefaults.standard.set(v, forKey: k) }
         XCTAssertEqual(UserDefaults.standard.double(forKey: "hoverDelay"), 0.4, accuracy: 0.001)
     }
 
-    // Enum Codable
-    func test_activationMethod_codable() throws { let d = try JSONEncoder().encode(ActivationMethod.hover); XCTAssertEqual(try JSONDecoder().decode(ActivationMethod.self, from: d), .hover) }
-    func test_notchHeightMode_codable() throws { for m in [NotchHeightMode.matchNotch, .matchMenuBar, .custom] { let d = try JSONEncoder().encode(m); XCTAssertEqual(try JSONDecoder().decode(NotchHeightMode.self, from: d), m) } }
-    func test_musicSource_codable() throws { for s in [MusicSource.auto, .appleMusic, .spotify, .nowPlaying] { let d = try JSONEncoder().encode(s); XCTAssertEqual(try JSONDecoder().decode(MusicSource.self, from: d), s) } }
-    func test_logLevel_codable() throws { for l in [LogLevel.debug, .info, .warning, .error] { let d = try JSONEncoder().encode(l); XCTAssertEqual(try JSONDecoder().decode(LogLevel.self, from: d), l) } }
-    func test_iconSize_codable() throws { for s in [QuickAppsIconSize.small, .medium, .large] { let d = try JSONEncoder().encode(s); XCTAssertEqual(try JSONDecoder().decode(QuickAppsIconSize.self, from: d), s) } }
-    func test_autoClear_codable() throws { for c in [AutoClearDuration.never, .oneHour, .sevenDays] { let d = try JSONEncoder().encode(c); XCTAssertEqual(try JSONDecoder().decode(AutoClearDuration.self, from: d), c) } }
+    // Enum Codable - using test-local enums that don't conflict
+    func test_activationMethod_codable() throws { let d = try JSONEncoder().encode(TestActivationMethod.hover); XCTAssertEqual(try JSONDecoder().decode(TestActivationMethod.self, from: d), .hover) }
+    func test_notchHeightMode_codable() throws {
+        // Test the production NotchHeightMode Codable conformance
+        let modes: [NotchHeightMode] = [.matchNotch, .matchMenuBar, .custom(36)]
+        for m in modes {
+            let d = try JSONEncoder().encode(m)
+            let decoded = try JSONDecoder().decode(NotchHeightMode.self, from: d)
+            XCTAssertEqual(decoded, m)
+        }
+    }
+    func test_musicSource_codable() throws { for s in MusicSource.allCases { let d = try JSONEncoder().encode(s); XCTAssertEqual(try JSONDecoder().decode(MusicSource.self, from: d), s) } }
+    func test_logLevel_codable() throws { for l in [TestLogLevel.debug, .info, .warning, .error] { let d = try JSONEncoder().encode(l); XCTAssertEqual(try JSONDecoder().decode(TestLogLevel.self, from: d), l) } }
+    func test_iconSize_codable() throws { for s in [TestQuickAppsIconSize.small, .medium, .large] { let d = try JSONEncoder().encode(s); XCTAssertEqual(try JSONDecoder().decode(TestQuickAppsIconSize.self, from: d), s) } }
+    func test_autoClear_codable() throws { for c in [TestAutoClearDuration.never, .oneHour, .sevenDays] { let d = try JSONEncoder().encode(c); XCTAssertEqual(try JSONDecoder().decode(TestAutoClearDuration.self, from: d), c) } }
 
     // Reset
     func test_reset_clearsKeys() {

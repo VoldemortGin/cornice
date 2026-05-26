@@ -1,6 +1,6 @@
 import XCTest
 import Combine
-@testable import Niya
+@testable import Crest
 
 final class MockShelfPersistence: ShelfPersistenceServiceProtocol {
     var savedItems: [ShelfItem]?
